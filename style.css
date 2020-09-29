@@ -3,12 +3,11 @@
 
 /*CSS RESET*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -30,12 +29,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -47,7 +40,7 @@ table {
 }
 
 
-.color-palet-class {
+.color-palet-dummy-class {
 	color: #00112bff;
 	color: #002255ff; /*Wrench*/
 	color: #003380ff; /*Comp*/
@@ -61,25 +54,28 @@ table {
 	color: #d5e5ffff;
 }
 
-.sans-serif {
-    font-family: "Roboto";
-}
-
-body {
+html, body {
+    position: relative;
     background-color: white;
+    color: #000000;
     font-family: Arial, Tahoma, sans-serif;
-    font-size: 16pt; color: #000000;
+    font-size: 16pt;
+    height: 100%;
+    margin: 0;
 }
 
-h1 {
-    color: #000000;
+h1, h2, h3, h4, h5, h6 {
+    color: #002255ff;
 }
 
 header {
-    background-color: white;
-    color: #ffffff;
+    background-color: #00112bff;
+    color: white;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
+    border-bottom: white;
+    border-bottom-width: 1px;
+    border-style: solid;
 }
 
 #container {
@@ -87,23 +83,28 @@ header {
 }
 
 nav {
-    width: 100%;
-    background-color: #003380ff;
+    background-color: #00112bff;
     overflow: auto;
 }
 
 nav ul {
-    list-style:none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00112bff;
+}
+
+nav ul li {
+    float: left;
 }
 
 nav ul li a {
-    float: left;
-    width: 15%;
-    padding: 12px;
+    display: block;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 nav ul li a:link, nav ul li a:visited {
@@ -112,26 +113,28 @@ nav ul li a:link, nav ul li a:visited {
 }
 
 nav ul li a:hover {
-    background-color: #0044aaff;
-    color: white;
+    background-color: #003380ff;
 }
 
-nav ul li a:active {
+nav ul li a.active {
     background-color: #000000;
 }
 
 main {
-    width: 80%;
+    width: 60%;
     background-color: #ffffff;
     float: left;
-    padding: 5px;
+    padding: 20px;
+    position: relative;
+    min-height: 100%;
 }
-
+/*
 footer {
-    clear:both;
-    background-color: #000000;
-    color: #ffffff;
-    text-align:center;
-    padding:5px;
-    font-size: 12pt;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background-color: #00112bff;
 }
+*/
