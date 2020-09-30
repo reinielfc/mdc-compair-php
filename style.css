@@ -69,13 +69,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    width: auto;
+    overflow: hidden;
     background-color: #00112bff;
-    color: white;
-    text-align: left;
-    padding: 10px;
+    border-bottom-style: solid;
     border-bottom: white;
     border-bottom-width: 1px;
-    border-style: solid;
+    padding: 20px 5px;
+}
+
+header img {
+    float: left;
+    margin: 0px 20px;
+}
+
+header a img:hover {
+
+}
+
+header h2 {
+    float: left;
+    color: white;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: normal;
+
+    border-left-style: solid;
+    border-left-color: white;
+    border-left-width: 2px;
 }
 
 #container {
@@ -85,6 +109,7 @@ header {
 nav {
     background-color: #00112bff;
     overflow: auto;
+    width: 100%;
 }
 
 nav ul {
@@ -107,17 +132,13 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:link, nav ul li a:visited {
-    display: block;
-    text-decoration: none;
-}
-
 nav ul li a:hover {
-    background-color: #003380ff;
+    text-decoration: underline;
 }
 
-nav ul li a.active {
-    background-color: #000000;
+nav ul li a:active {
+    color: #00112bff;
+    background-color: white;
 }
 
 main {
@@ -125,16 +146,18 @@ main {
     background-color: #ffffff;
     float: left;
     padding: 20px;
-    position: relative;
-    min-height: 100%;
 }
-/*
+
 footer {
     position: absolute;
     left: 0px;
-    bottom: 0;
-    height: 150px;
+    bottom: 0px;
     width: 100%;
     background-color: #00112bff;
+    color: white;
 }
-*/
+
+footer p a {
+    color: white;
+    padding: 0px 10px;
+}
