@@ -38,6 +38,8 @@ table {
 	border-spacing: 0;
 }
 
+
+
 html, body {
     position: relative;
     background-color: white;
@@ -51,6 +53,12 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
     color: #002255ff;
 }
+
+#container {
+    width:100%;
+}
+
+/*Header*/
 
 header {
     width: auto;
@@ -82,9 +90,7 @@ header h2 {
     border-left-width: 2px;
 }
 
-#container {
-    width:100%;
-}
+/*Navigation bar*/
 
 nav {
     background-color: #00112bff;
@@ -126,12 +132,16 @@ nav ul li a.current {
     text-decoration: underline;
 }
 
+/*Main content*/
+
 main {
     width: 60%;
     background-color: #ffffff;
     float: left;
     padding: 20px;
 }
+
+/*footer*/
 
 footer {
     position: absolute;
