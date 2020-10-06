@@ -49,6 +49,7 @@ header #title a {
 
 header h2 {
     margin: 0;
+    font-weight: normal;
 }
 
 /*Navigation*/
