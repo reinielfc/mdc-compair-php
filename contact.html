@@ -35,9 +35,13 @@
           <h1>Contact</h1>
         </div>
 
-        <form id="contact-form">
+        <?php
+        echo "hello";
+        ?>
 
-          <p>Should you have any questions and/or complaints:</p>
+        <form id="contact-form" action="" method="POST" autocomplete="on">
+
+          <h2>Should you have any questions and/or complaints:</h2>
 
           <ul style="line-height: normal;">
             <li>Call us at <b>305-555-1247</b>, or</li>
@@ -58,7 +62,7 @@
 
             <div class="text-field-box">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="email@example.com" required>
+              <input type="email" name="email" id="email" placeholder="email@example.com" autocomplete="off" required>
             </div>
 
             <div class="text-field-box">

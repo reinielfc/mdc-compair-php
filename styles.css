@@ -8,7 +8,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #00112bff;
 }
 
 /*
@@ -226,4 +225,21 @@ textarea:focus::placeholder {
     text-decoration: underline;
     background-color: #002255ff;
     cursor: pointer;
+}
+
+@media only screen and (max-aspect-ratio: 9 / 9) {
+
+    header {
+        padding: 16px 2%;
+    }
+
+    nav ul {
+        padding: 0% 2%;
+    }
+
+    .main-content {
+        padding: 0% 0%;
+    }
+
+
 }
