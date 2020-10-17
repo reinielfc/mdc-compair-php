@@ -24,7 +24,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="about-us.html">About Us</a></li>
-        <li><a class="current" href="contact.html">Contact</a></li>
+        <li><a class="current" href="contact.php">Contact</a></li>
       </ul>
     </nav>
 
@@ -36,7 +36,7 @@
         </div>
 
         <?php
-        echo "hello";
+        echo "Hell-O";
         ?>
 
         <form id="contact-form" action="" method="POST" autocomplete="on">
@@ -143,7 +143,7 @@
         <a href="services.html">Services</a> |
         <a href="careers.html">Careers</a> |
         <a href="about-us.html">About Us</a> |
-        <a href="contact.html">Contact</a>
+        <a href="contact.php">Contact</a>
       </p>
     </footer>
   </body>
