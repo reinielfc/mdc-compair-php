@@ -190,6 +190,11 @@ textarea:focus::placeholder {
     border-color: #ff6600;
 }
 
+#contact-form .text-field-box input:placeholder-shown,
+#contact-form .textarea-box textarea:placeholder-shown {
+    font-style: italic;
+}
+
 #contact-form .textarea-box textarea {
     box-sizing: border-box;
     width: 100%;
@@ -227,7 +232,7 @@ textarea:focus::placeholder {
     cursor: pointer;
 }
 
-@media only screen and (max-aspect-ratio: 9 / 9) {
+@media only screen and (max-width: 1100px) {
 
     header {
         padding: 16px 2%;
@@ -240,6 +245,5 @@ textarea:focus::placeholder {
     .main-content {
         padding: 0% 0%;
     }
-
 
 }

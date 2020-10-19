@@ -35,11 +35,7 @@
           <h1>Contact</h1>
         </div>
 
-        <?php
-        echo "Hell-O";
-        ?>
-
-        <form id="contact-form" action="" method="POST" autocomplete="on">
+        <form id="contact-form" action="contact.php" method="POST" autocomplete="on">
 
           <h2>Should you have any questions and/or complaints:</h2>
 
