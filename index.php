@@ -1,3 +1,7 @@
+<?php
+$title = 'Home';
+?>
+
 <!DOCTYPE html>
 <html>
 

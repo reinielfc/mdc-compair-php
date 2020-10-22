@@ -1,7 +1,7 @@
 <head>
     <link rel="icon" href="images/favicon.svg">
     <link rel="stylesheet" href="styles.css">
-    <title>Template | CompAir</title>
+    <title><?php echo($title) ?> | CompAir</title>
 </head>
 
 <body>
@@ -11,13 +11,22 @@
             <h2> HVAC Installation <br> Maintenance & Repair</h2>
         </div>
         <ul>
-            <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="">Air Conditioning</a></li>
-            <li><a href="">Heating</a></li>
-            <li><a href="">Maintenance</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <?php
+                $urls = array(
+                    'Home' => './index.php',
+                    'Air Conditioning' => '#',
+                    'Heating' => '#',
+                    'Maintenance' => '#',
+                    'Services' => './services.html',
+                    'Careers' => './careers.html',
+                    'About Us' => './about-us.html',
+                    'Contact' => './contact.html'
+                );
+
+                foreach ($urls as $name => $url) {
+                    echo '<li ' . (($title === $name) ? ' class="current" ' : '') .
+                        '><a href="'.$url.'">'.$name.'</a></li>';
+                }
+            ?>
         </ul>
     </nav>
