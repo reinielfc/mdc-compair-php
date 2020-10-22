@@ -1,9 +1,9 @@
 <?php
 require_once 'db_login.php';
-$conn = openCon();
+$conn = openConn()  or die("Connection failed: %s\n" . $conn->error);
 
 echo "Connected Successfully!";
 
-closeCon($conn);
+closeConn($conn);
 
 ?>

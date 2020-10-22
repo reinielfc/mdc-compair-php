@@ -1,6 +1,6 @@
 <?php
 
-function openCon() {
+function openConn() {
     $hn = 'localhost';
     $un = 'root';
     $pw = 'mysql';
@@ -12,7 +12,7 @@ function openCon() {
 }
 
 
-function closeCon($conn) {
+function closeConn($conn) {
     $conn->close();
 }
 

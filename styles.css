@@ -24,29 +24,23 @@ blockquote {}
 
 /*Header*/
 
-header {
+#title {
     overflow: hidden;
     height: fit-content+5px;
     padding: 16px 16%;
-    background-color: #00112bff;
     color: #fff;
 }
 
-header #title {
-    display: table;
-}
-
-header #title > * {
-    display: table-cell;
+#title > * {
     vertical-align: middle;
     padding: 10px;
 }
 
-header #title a {
+#title a {
     border-right: 2px solid #fff;
 }
 
-header h2 {
+#title h2 {
     margin: 0;
     font-weight: normal;
 }
