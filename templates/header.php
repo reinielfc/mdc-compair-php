@@ -13,19 +13,20 @@
         <ul>
             <?php
                 $urls = array(
-                    'Home' => './index.php',
+                    'Home'             => './index.php',
                     'Air Conditioning' => '#',
-                    'Heating' => '#',
-                    'Maintenance' => '#',
-                    'Services' => './services.html',
-                    'Careers' => './careers.html',
-                    'About Us' => './about-us.html',
-                    'Contact' => './contact.html'
+                    'Heating'          => '#',
+                    'Maintenance'      => '#',
+                    'Services'         => './services.php',
+                    'Careers'          => './careers.php',
+                    'About Us'         => './about-us.php',
+                    'Contact'          => './contact.php'
                 );
 
+                echo "\n";
                 foreach ($urls as $name => $url) {
-                    echo '<li ' . (($title === $name) ? ' class="current" ' : '') .
-                        '><a href="'.$url.'">'.$name.'</a></li>';
+                    echo '<li><a' . (($title === $name) ? ' class="current" ' : ' ') .
+                        'href="' . $url . '">' . $name . "</a></li>\n";
                 }
             ?>
         </ul>
