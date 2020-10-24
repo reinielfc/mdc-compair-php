@@ -94,29 +94,27 @@ nav a.current {
 .main-content {
     width: 100%;
     content: "";
+    display: table;
     clear: both;
     padding: 0% 16%;
     background-color: #ddd;
 }
 
 .main-content main {
+    display: table-cell;
     padding: 15px;
     background-color: #fff;
-
 }
 
 .main-content aside {
-
+    display: table-cell;
+    width: 40%;
+    background-color: #fff;
 }
 
 .main-content h1 {
     margin: 0;
     color: #00112bff;
-}
-
-.main-content aside {
-    float: left;
-    background-color: #fff;
 }
 
 /*Footer*/
