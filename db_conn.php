@@ -11,10 +11,15 @@ function openConn() {
     return $conn;
 }
 
-
 function closeConn($conn) {
     $conn->close();
 }
 
+function sanitizeString($var)
+{
+    $var = strip_tags($var);
+    $var = htmlentities($var);
+    return $var;
+}
 
 ?>

@@ -5,112 +5,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="47.013149mm"
    height="14.431186mm"
    viewBox="0 0 47.01315 14.431186"
    version="1.1"
-   id="svg1112"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="logo.svg">
+   id="svg1112">
   <defs
      id="defs1106" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="19.585247"
-     inkscape:cy="-14.841015"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="1072"
-     inkscape:window-y="224"
-     inkscape:window-maximized="1"
-     showguides="false"
-     inkscape:guide-bbox="true"
-     inkscape:snap-bbox="true"
-     inkscape:snap-intersection-paths="true"
-     inkscape:object-paths="true"
-     inkscape:snap-smooth-nodes="true"
-     inkscape:bbox-paths="true"
-     inkscape:bbox-nodes="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true"
-     inkscape:snap-global="true">
-    <sodipodi:guide
-       position="61.240016,0.78461705"
-       orientation="1,0"
-       id="guide855" />
-    <sodipodi:guide
-       position="-5.7335001,-0.94494522"
-       orientation="1,0"
-       id="guide859" />
-    <sodipodi:guide
-       position="-3.3280747,5.3454368"
-       orientation="0,-1"
-       id="guide861" />
-    <sodipodi:guide
-       position="61.988141,-0.94494522"
-       orientation="1,0"
-       id="guide863" />
-    <sodipodi:guide
-       position="37.135268,10.991235"
-       orientation="29.649713,2.3242205"
-       id="guide912" />
-    <sodipodi:guide
-       position="37.750218,3.1464148"
-       orientation="0,-8.6451402"
-       id="guide914" />
-    <sodipodi:guide
-       position="35.462858,3.1464148"
-       orientation="-6.4295433,-0.47788346"
-       id="guide916" />
-    <sodipodi:guide
-       position="35.336418,4.8475648"
-       orientation="0,-8.9274709"
-       id="guide918" />
-    <sodipodi:guide
-       position="32.974358,4.8475648"
-       orientation="6.4295433,-3.171326"
-       id="guide920" />
-    <sodipodi:guide
-       position="32.135278,3.1464148"
-       orientation="0,-3.3668031"
-       id="guide922" />
-    <sodipodi:guide
-       position="31.244478,3.1464148"
-       orientation="-29.649713,14.705386"
-       id="guide924" />
-    <sodipodi:guide
-       position="35.135278,10.991235"
-       orientation="0,7.5590173"
-       id="guide926" />
-    <sodipodi:guide
-       position="33.359418,5.6349148"
-       orientation="0,7.2766488"
-       id="guide928" />
-    <sodipodi:guide
-       position="35.284698,5.6349148"
-       orientation="-13.141455,-0.8688378"
-       id="guide930" />
-    <sodipodi:guide
-       position="35.054818,9.1119247"
-       orientation="13.141455,-6.407811"
-       id="guide932" />
-  </sodipodi:namedview>
   <metadata
      id="metadata1109">
     <rdf:RDF>
@@ -119,13 +20,11 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-73.075231,-129.8627)"
      style="display:inline">
@@ -176,9 +75,7 @@
     </g>
   </g>
   <g
-     inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Layer 2"
      style="display:inline"
      transform="translate(-5.7335003,-1.690799)" />
 </svg>
