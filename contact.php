@@ -17,11 +17,14 @@ if (isset($_POST['submit'])) {
       }
     _END;
   } else {
-    $sub;
+    $sub; // submission
     foreach ($_POST as $field => $value) {
       if (!empty($_POST[$field]))
         $sub[$field] = sanitizeString($value);
     }
+    $conn = openConn();
+    addContactForm($conn, $sub);
+    $conn->close();
   }
 }
 
@@ -31,7 +34,7 @@ if (isset($_POST['submit'])) {
 <html>
 
 <?php
-$add_styles .= $label_style;
+$add_styles = $label_style;
 require_once('templates/header.php');
 
 ?>
@@ -136,13 +139,11 @@ require_once('templates/header.php');
 
   </main>
 
-  <aside>
+  <aside style="overflow: scroll; box-sizing: border-box;">
     <?php
-      if (!empty($sub)) {
-        foreach ($sub as $key => $value) {
-          echo $key . " => \"" . $value . "\"<br>";
-        }
-      }
+    $conn = openConn();
+    printTable($conn, 'contact_form');
+    $conn->close();
     ?>
   </aside>
 </div>
