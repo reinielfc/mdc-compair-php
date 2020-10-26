@@ -1,7 +1,7 @@
 <?php
 $title = 'Contact';
 
-require_once 'db_conn.php';
+require_once 'db_connPDO.php';
 $label_style = "";
 
 if (isset($_POST['submit'])) {
