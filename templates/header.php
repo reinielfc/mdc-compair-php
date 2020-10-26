@@ -17,9 +17,9 @@
             <?php
             $urls = array(
                 'Home'             => './index.php',
-                'Air Conditioning' => '#',
-                'Heating'          => '#',
-                'Maintenance'      => '#',
+                'Air Conditioning' => './services.php#',
+                'Heating'          => './services.php#',
+                'Maintenance'      => './services.php#',
                 'Services'         => './services.php',
                 'Careers'          => './careers.php',
                 'About Us'         => './about-us.php',
