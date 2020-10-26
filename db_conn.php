@@ -45,7 +45,16 @@ function addContactForm($conn, $sub) {
     $stmt->close();
 }
 
+// for demonstration purposes
 function printTable($conn, $table) {
+
+    if (isset($_POST['delete']) && isset($_POST['form_id'])) {
+        $form_id = $conn->real_escape_string($_POST['form_id']);
+        $query = "DELETE FROM contact_form WHERE form_id='$form_id'";
+        $result = $conn->query($query);
+        if (!$result) echo "DELETE failed<br><br>";
+    }
+
     $query = "SELECT * FROM $table";
     $result = $conn->query($query);
     if (!$result) die("Database access failed");
@@ -83,6 +92,10 @@ function printTable($conn, $table) {
                Comments:
         \n$r7\n
         </pre>
+        <form action='contact.php' method='post'>
+        <input type='hidden' name='delete' value='yes'>
+        <input type='hidden' name='form_id' value='$r0'>
+        <input type='submit' value='DELETE RECORD'></form>
         _END;
     }
 

@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     }
     $conn = openConn();
     addContactForm($conn, $sub);
-    $conn->close();
+    closeConn($conn);
   }
 }
 
@@ -139,11 +139,11 @@ require_once('templates/header.php');
 
   </main>
 
-  <aside style="overflow: scroll; box-sizing: border-box;">
+  <aside style="overflow: scroll; height: 50%;">
     <?php
     $conn = openConn();
     printTable($conn, 'contact_form');
-    $conn->close();
+    closeConn($conn);
     ?>
   </aside>
 </div>
