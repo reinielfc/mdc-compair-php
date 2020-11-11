@@ -1,146 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 
-  <head>
+<head>
+    <title>Contact | CompAir</title>
     <link rel="icon" href="images/favicon.svg">
-    <link rel="stylesheet" href="styles.css">
-    <title>Template | CompAir</title>
-  </head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/contact-form.css">
+    <meta charset="UTF-8">
+</head>
 
-  <body>
-    <header>
-      <div id="title">
-        <a href="index.html"><img src="images/logo.svg" alt="CompAir Logo"></a>
-        <h2> HVAC Installation <br> Maintenance & Repair</h2>
-      </div>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <!--<h1>CompAir</h1>-->
+            <div class="left">
+                <a href="index.html"><img src="images/logo.svg" alt="CompAir"></a>
+                <h2>HVAC Installation <br> Maintenance & Repair</h2>
+            </div>
+            <div class="right">
+                <h3>Call Us: <i style="font-weight: 100;">(305) 555-1247</i></h3>
+            </div>
+        </div>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Air Conditioning</a></li>
-        <li><a href="">Heating</a></li>
-        <li><a href="">Maintenance</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a class="current" href="contact.html">Contact</a></li>
-      </ul>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html#">Air Conditioning</a></li>
+                <li><a href="./services.html#">Heating</a></li>
+                <li><a href="./services.html#">Maintenance</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./careers.html">Careers</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="main-content">
-      <main>
+    <div class="main container">
+        <section id="main">
+            <div id="main-heading">
+                <h1>Contact</h1>
+            </div>
 
-        <div class="heading">
-          <h1>Contact</h1>
+            <p>Should you have any questions and/or complaints:</p>
+            <ul style="line-height: normal;">
+                <li>Call us at <b>305-555-1247</b>, or</li>
+                <li>Email us at <a href="mailto: contact@compair.com">contact@compair.com</a>, or</li>
+                <li>Fill out the following form:</li>
+            </ul>
+
+            <form id="contact-form" action="contact.html" method="POST" autocomplete="on">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="fname">First Name <span>*</span> </label>
+                            <input type="text" name="fname" id="fname" placeholder="John" required>
+                        </td>
+                        <td><label for="lname">Last Name <span>*</span> </label>
+                            <input type="text" name="lname" id="lname" placeholder="Doe" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email <span>*</span> </label>
+                            <input type="text" name="email" id="email" placeholder="email@example.com"
+                                autocomplete="off" required>
+                        </td>
+                        <td>
+                            <label for="phone">Phone Number <span>*</span> </label>
+                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="city">City <span>*</span> </label>
+                            <input type="text" name="city" id="city" placeholder="Miami" required>
+                        </td>
+                        <td>
+                            <label for="zip">Zip Code <span>*</span> </label>
+                            <input type="text" name="zip" id="zip" placeholder="33176">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="comments">Comments <span>*</span> </label>
+                            <textarea name="comments" id="comments" cols="30" rows="10"
+                                placeholder="Type your comments here..." required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>I'd Prefer To Be Contacted By</label>
+                            <ul class="choice-list">
+                                <li>
+                                    <input type="radio" name="contact_pref" id="email-pref" value="email">
+                                    <label for="email-pref">Email</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="contact_pref" id="phone-pref" value="phone">
+                                    <label for="phone-pref">Phone</label>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>How Did You Hear About Us?</label>
+                            <select name="discovery_survey" id="discovery_survey">
+                                <option value="">(select one)</option>
+                                <option>Previous Customer</option>
+                                <option>Google</option>
+                                <option>Facebook</option>
+                                <option>Twitter</option>
+                                <option>Other Website</option>
+                                <option>Newspaper Advertisement</option>
+                                <option>TV Advertisement</option>
+                                <option>Radio Advertisement</option>
+                                <option>Sign on Service Truck</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Join Our Email List</label>
+                            <ul class="choice-list">
+                                <li>
+                                    <input type="checkbox" name="email_list" id="join-email-list">
+                                    <label for="join-email-list">Sign me up for the CompAir email list</label>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p><span>*</span> Check that all fields with an asterisk are filled.</p>
+                            <input type="submit" name="submit" value="SUBMIT">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <aside id="sidebar">
+            <div class="container">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique
+                    temporibus minus, aspernatur pariatur molestias provident, odit qui quidem maiores,
+                    adipisci voluptate? Inventore, repudiandae mollitia? Sed, omnis? Quas, repudiandae non.</p>
+            </div>
+        </aside>
         </div>
 
-        <form id="contact-form" action="contact.html" method="POST" autocomplete="on">
-
-          <h2>Should you have any questions and/or complaints:</h2>
-
-          <ul style="line-height: normal;">
-            <li>Call us at <b>305-555-1247</b>, or</li>
-            <li>Email us at <a href="mailto: contact@compair.com">contact@compair.com</a>, or</li>
-            <li>Fill out the following form:</li>
-          </ul>
-
-          <fieldset class="two-col">
-            <div class="text-field-box">
-              <label for="fname">First Name</label>
-              <input type="text" name="fname" id="fname" placeholder="John" required>
-            </div>
-
-            <div class="text-field-box">
-              <label for="lname">Last Name</label>
-              <input type="text" name="lname" id="lname" placeholder="Doe" required>
-            </div>
-
-            <div class="text-field-box">
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="email@example.com" autocomplete="off" required>
-            </div>
-
-            <div class="text-field-box">
-              <label for="phone">Phone Number</label>
-              <input type="text" name="phone" id="phone" placeholder="305-555-7777"
-                patern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-            </div>
-
-            <div class="text-field-box">
-              <label for="city">City</label>
-              <input type="text" name="city" id="city" placeholder="Miami" required>
-            </div>
-
-            <div class="text-field-box">
-              <label for="zip">Zip Code</label>
-              <input type="text" name="zip" id="zip" placeholder="33176">
-            </div>
-          </fieldset>
-
-          <fieldset class="one-col">
-            <div class="textarea-box">
-              <label for="comments">Comments</label>
-              <textarea name="comments" id="comments" cols="30" rows="10"
-                placeholder="Type your comments here..."></textarea>
-            </div>
-
-            <div class="box">
-              <label for="contact-pref">I'd Prefer To Be Contacted By</label>
-              <ul>
-                <li>
-                  <input type="radio" name="contact-pref" id="email-pref" value="email">
-                  <label for="email-pref">Email</label>
-                </li>
-                <li>
-                  <input type="radio" name="contact-pref" id="phone-pref" value="phone">
-                  <label for="phone-pref">Phone</label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="box">
-              <label for="contact-source">How Did You Hear About Us?</label>
-              <select name="contact-source" id="contact-source">
-                <option value="">(select one)</option>
-                <option value="previous customer">Previous Customer</option>
-                <option value="google">Google</option>
-                <option value="facebook">Facebook</option>
-                <option value="twitter">Twitter</option>
-                <option value="other">Other Website</option>
-                <option value="newspaper ad">Newspaper Advertisement</option>
-                <option value="tv ad">TV Advertisement</option>
-                <option value="radio ad">Radio Advertisement</option>
-                <option value="service truck sign">Sign on Service Truck</option>
-              </select>
-            </div>
-
-            <div class="box">
-              <label for="email-list">Join Our Email List</label>
-              <input type="checkbox" name="email-list" id="email-list">
-              <label for="email-list">Sign me up for the CompAir email list</label>
-            </div>
-          </fieldset>
-
-          <fieldset class="submit">
-            <input type="submit" value="Submit">
-          </fieldset>
-
-        </form>
-      </main>
-
-      <aside>
-      </aside>
-    </div>
-
-    <footer>
-      <p>
-        <a href="index.html">Home</a> |
-        <a href="services.html">Services</a> |
-        <a href="careers.html">Careers</a> |
-        <a href="about-us.html">About Us</a> |
-        <a href="contact.html">Contact</a>
-      </p>
+        <footer id="main-footer">
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="careers.html">Careers</a> |
+            <a href="about-us.html">About Us</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>Copyright &copy; 2020 CompAir</p>
     </footer>
-  </body>
+</body>
+
 </html>
