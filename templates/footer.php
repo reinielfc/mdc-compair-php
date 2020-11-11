@@ -1,4 +1,7 @@
-    <footer>
+<?php
+echo <<< _END
+\n
+    <footer id="main-footer">
         <p>
             <a href="index.php">Home</a> |
             <a href="services.php">Services</a> |
@@ -6,5 +9,9 @@
             <a href="about-us.php">About Us</a> |
             <a href="contact.php">Contact</a>
         </p>
+        <p>Copyright &copy; 2020 CompAir</p>
     </footer>
 </body>
+</html>
+_END;
+?>

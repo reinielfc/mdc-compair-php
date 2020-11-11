@@ -1,26 +1,21 @@
 <?php
 $title = 'Services';
-?>
+require_once './templates/header.php';
 
-<!DOCTYPE html>
-<html>
+echo <<< _END
+    <div class="main container">
+        <section id="main">
+            <div id="main-heading">
+                <h1>$title</h1>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ipsa optio
+            omnis hic et accusantium praesentium neque facere fugit vero. Autem vero molestiae
+            quibusdam, quod unde deleniti laboriosam veniam tempore!</p>
+        </section>
+_END;
 
-  <?php require_once('templates/header.php'); ?>
+require_once './templates/aside.php';
 
-  <div class="main-content">
-    <main>
-      <h1>Services</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-      laborum.</p>
-    </main>
+echo "\t</div>";
 
-    <aside>
-    </aside>
-  </div>
-
-  <?php require_once('templates/footer.php'); ?>
-
-</html>
+require_once './templates/footer.php';
