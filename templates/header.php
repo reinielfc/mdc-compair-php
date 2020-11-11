@@ -8,11 +8,12 @@
 </head>
 
 <body>
+    <div class="top">
+        <a href="index.php"><img src="images/logo.svg" alt="CompAir Logo"></a>
+        <h2>HVAC Installation <br> Maintenance & Repair</h2>
+        <h3>Call Us: 305-555-1247</h3>
+    </div>
     <nav>
-        <div id="title">
-            <a href="index.php"><img src="images/logo.svg" alt="CompAir Logo"></a>
-            <h2> HVAC Installation <br> Maintenance & Repair</h2>
-        </div>
         <ul>
             <?php
             $urls = array(

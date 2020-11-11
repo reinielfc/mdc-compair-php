@@ -5,21 +5,21 @@ $title = 'About Us';
 <!DOCTYPE html>
 <html>
 
-    <?php require_once('templates/header.php'); ?>
+<?php require_once('templates/header.php'); ?>
 
-    <div class="main-content">
-        <main>
-            <div class="heading">
-                <h1>About Us</h1>
-            </div>
+<div class="main-content">
+    <main>
+        <h1>About Us</h1>
 
-            <p> Started in 2012, by father Orlando and son Ronaldo Hernandez, CompAir was founded with one mission in mind; to
+        <img src="./images/logo.svg" alt="CompAir Logo">
+
+        <p> Started in 2012, by father Orlando and son Ronaldo Hernandez, CompAir was founded with one mission in mind; to
             provide a better service, at a lower price. Family-owned and operated, we understand the frustration of having our
             appliances shut down at the worst time possible. That is why we are committed to offering emergency services 24/7,
             or (if the problem is bad enough) temporary replacements, all so that the comfort of your life is not immediately
             stopped by a minor inconvenience. </p>
 
-            <p> We pride ourselves with providing an individualized service for each and every customer. We believe that each
+        <p> We pride ourselves with providing an individualized service for each and every customer. We believe that each
             presents a unique opportunity for a lasting business relationship, and as such they deserve special attention and
             quality results. Whether you need a new AC installed, or your refrigerator stopped running, or the water heater is
             not doing its job, we are prepared to deal with all of it with skill and professionalism. If you live in the areas
@@ -49,14 +49,19 @@ $title = 'About Us';
             <li>Coral Gables</li>
             <li>Doral</li>
             <li>Palmetto Bay</li>
-            <p>*We also offer services to surrounding areas.</p>
         </ul>
-        </main>
+        <p>*We also offer services to surrounding areas.</p>
+    </main>
 
-        <aside>
-        </aside>
-    </div>
+    <aside id="sidebar">
+        <div class="container">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique
+                temporibus minus, aspernatur pariatur molestias provident, odit qui quidem maiores,
+                adipisci voluptate? Inventore, repudiandae mollitia? Sed, omnis? Quas, repudiandae non.</p>
+        </div>
+    </aside>
+</div>
 
-    <?php require_once('templates/footer.php'); ?>
+<?php require_once('templates/footer.php'); ?>
 
 </html>

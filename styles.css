@@ -10,22 +10,64 @@ body {
     margin: 0;
 }
 
-/*
-p {}
+p, li {
+    font-size: 18px;
+}
 
-h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {
+    background-color: #00112bff;
+    color: white;
+    padding: 1% 3%;
+    font-weight: normal;
+}
 
-ul {}
+h1 {
+    font-size: 40px;
+}
 
-blockquote {}
-*/
+h2 {
+    font-size: 25px;
+}
+
+a { 
+    color: goldenrod;
+}
 
 /* SITEWIDE */
 
 /*Header*/
 
+.top {
+    position: relative;
+    background-color: #00112bff;
+    /*! height: 500px; */
+    padding: 16px 16%;
+    overflow: hidden;
+}
+
+.top img {
+    float: left;
+    padding: ;
+}
+
+.top h2 {
+    float: left;
+    margin: unset;
+    padding: unset;
+}
+
+.top h3 {
+    float: right;
+    padding: unset;
+    margin: unset;
+}
+
+
+
+/*
 #title {
     overflow: hidden;
+    width: 100%;
     height: fit-content+5px;
     padding: 16px 16%;
     color: #fff;
@@ -33,6 +75,7 @@ blockquote {}
 }
 
 #title > * {
+    width: fit-content;
     display: table-cell;
     vertical-align: middle;
     padding: 10px;
@@ -45,7 +88,14 @@ blockquote {}
 #title h2 {
     margin: 0;
     font-weight: normal;
+    color: white;
 }
+
+#title h3 {
+    text-align: right;
+    vertical-align: bottom;
+}
+*/
 
 /*Navigation*/
 
@@ -71,7 +121,7 @@ nav a {
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
-    color: #fff;
+    color: white;
 }
 
 nav a:hover {
@@ -112,9 +162,9 @@ nav a.current {
     background-color: #fff;
 }
 
-.main-content h1 {
-    margin: 0;
-    color: #00112bff;
+.main-content img {
+    display: block;
+    width: 100%;
 }
 
 /*Footer*/
@@ -127,7 +177,7 @@ footer {
 }
 
 footer a {
-    color: #fff;
+    color: white;
     padding: 0px 15px;
 }
 
@@ -186,11 +236,15 @@ textarea:focus::placeholder {
     font-size: 12pt;
 }
 
-#contact-form .text-field-box input:focus,
+#contact-form .text-field-box input:focus {
+    border-color: #ff6600;
+    color: #ff6600;
+    outline: none;
+}
+
 #contact-form .textarea-box textarea:focus {
     border-color: #ff6600;
     outline: none;
-
 }
 
 #contact-form .text-field-box input:placeholder-shown,
