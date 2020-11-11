@@ -1,28 +1,19 @@
 <?php
 $title = 'Contact';
 
-
 if (isset($_POST['submit'])) {
-    if (!(
-        empty($_POST['fname']) || empty($_POST['lname']) ||
-        empty($_POST['email']) || empty($_POST['phone']) ||
-        empty($_POST['city'])  || empty($_POST['comments'])
-    )) {
-        if (isset($_POST['email_list']) && $_POST['email_list'] == 'on') {
-            $_POST['email_list'] = "TRUE";
-        } else {
-            $_POST['email_list'] = "FALSE";
-        }
 
+    require_once './php/validate-contact.php';
+
+    if ($ready) {
         require_once './php/DBConnection.php';
         $conn = new DBConnection();
         $conn->open();
         $conn->insertRecord('contact_form', $_POST);
         $conn->close();
     }
+
 }
-
-
 
 require_once './templates/header.php';
 
@@ -44,35 +35,35 @@ echo <<< _END
                 <table>
                     <tr>
                         <td>
-                            <label for="fname">First Name <span>*</span> </label>
+                            <label for="fname">First Name <span>* $fnameErr</span> </label>
                             <input type="text" name="fname" id="fname" placeholder="John" required>
                         </td>
-                        <td><label for="lname">Last Name <span>*</span> </label>
+                        <td><label for="lname">Last Name <span>* $lnameErr</span> </label>
                             <input type="text" name="lname" id="lname" placeholder="Doe" required></td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Email <span>*</span> </label>
+                            <label for="email">Email <span>* $emailErr</span> </label>
                             <input type="text" name="email" id="email" placeholder="email@example.com" autocomplete="off" required>
                         </td>
                         <td>
-                            <label for="phone">Phone Number <span>*</span> </label>
+                            <label for="phone">Phone Number <span>* $phoneErr</span> </label>
                             <input type="text" name="phone" id="phone" placeholder="305-555-7777" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="city">City <span>*</span> </label>
+                            <label for="city">City <span>* $cityErr</span> </label>
                             <input type="text" name="city" id="city" placeholder="Miami" required>
                         </td>
                         <td>
-                            <label for="zip">Zip Code <span>*</span> </label>
+                            <label for="zip">Zip Code <span>$zipErr</span> </label>
                             <input type="text" name="zip" id="zip" placeholder="33176">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <label for="comments">Comments <span>*</span> </label>
+                            <label for="comments">Comments <span>* $commentsErr</span> </label>
                             <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." required></textarea>
                         </td>
                     </tr>

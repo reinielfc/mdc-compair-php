@@ -50,7 +50,7 @@ class DBConnection {
 
         foreach ($field_names as $name) {
             if (array_key_exists($name, $data_array)) {
-                $value = $this->sanitizeString($data_array[$name]);
+                $value = $data_array[$name];
 
                 if ($value == "")
                     $new_data[$name] = "NULL";
@@ -71,13 +71,6 @@ class DBConnection {
         $this->conn->query($sql) or die("Failed Query!");
     }
 
-    function sanitizeString($string)
-    {
-        $string = strip_tags($string);
-        $string = htmlentities($string);
-        $string = mysqli_real_escape_string($this->conn, $string);
-        return $string;
-    }
 }
 
 ?>
