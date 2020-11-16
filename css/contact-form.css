@@ -1,5 +1,5 @@
 #contact-form span {
-    color: #f60;
+    color: #f00;
 }
 
 #contact-form table {
@@ -40,8 +40,8 @@
 }
 
 #contact-form input[type="text"]:focus {
-    border-color: #d9d900;
-    color: #00112b;
+    border-color: #f60;
+    color: #f60;
     outline: none;
 }
 

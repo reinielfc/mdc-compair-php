@@ -36,35 +36,35 @@ echo <<< _END
                     <tr>
                         <td>
                             <label for="fname">First Name <span>* $fnameErr</span> </label>
-                            <input type="text" name="fname" id="fname" placeholder="John" required>
+                            <input type="text" name="fname" id="fname" placeholder="John" value="$fname" required>
                         </td>
                         <td><label for="lname">Last Name <span>* $lnameErr</span> </label>
-                            <input type="text" name="lname" id="lname" placeholder="Doe" required></td>
+                            <input type="text" name="lname" id="lname" placeholder="Doe" value="$lname" required></td>
                     </tr>
                     <tr>
                         <td>
                             <label for="email">Email <span>* $emailErr</span> </label>
-                            <input type="text" name="email" id="email" placeholder="email@example.com" autocomplete="off" required>
+                            <input type="text" name="email" id="email" placeholder="email@example.com" autocomplete="off" value="$email" required>
                         </td>
                         <td>
                             <label for="phone">Phone Number <span>* $phoneErr</span> </label>
-                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" required>
+                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" value="$phone" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <label for="city">City <span>* $cityErr</span> </label>
-                            <input type="text" name="city" id="city" placeholder="Miami" required>
+                            <input type="text" name="city" id="city" placeholder="Miami" value="$city" required>
                         </td>
                         <td>
                             <label for="zip">Zip Code <span>$zipErr</span> </label>
-                            <input type="text" name="zip" id="zip" placeholder="33176">
+                            <input type="text" name="zip" id="zip" placeholder="33176" value="$zip">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <label for="comments">Comments <span>* $commentsErr</span> </label>
-                            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." required></textarea>
+                            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." value="$comments" required></textarea>
                         </td>
                     </tr>
                     <tr>

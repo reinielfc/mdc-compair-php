@@ -20,6 +20,7 @@ echo <<< _END
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/contact-form.css">
     <meta charset="UTF-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
 <body>
     <header id="main-header">
