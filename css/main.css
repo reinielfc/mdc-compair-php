@@ -107,7 +107,7 @@ a {
 }
 
 #showcase {
-    background-image: url('../images/showcase.jpg');
+    background-image: url('../img/showcase.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -148,6 +148,19 @@ a {
     box-sizing: border-box;
 }
 
+#main button {
+    border: none;
+    padding: 10px;
+    font-size: 12pt;
+    background-color: #00112b;
+    color: #fff;
+}
+
+#main button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #sidebar {
     float: right;
     width: 40%;
@@ -181,6 +194,10 @@ a {
 
 @media (max-width: 1200px) {
 
+    .container {
+        width: 98%;
+    }
+
     .main.container {
         width: 100%;
     }
@@ -198,6 +215,5 @@ a {
     #main-header .right {
         float: left;
     }
-
 
 }

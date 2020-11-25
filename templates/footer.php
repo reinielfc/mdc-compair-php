@@ -9,7 +9,7 @@ echo <<< _END
             <a href="about-us.php">About Us</a> |
             <a href="contact.php">Contact</a>
         </p>
-        <p>Copyright &copy; 2020 CompAir</p>
+        <p>Created By Reiniel Fernandez Cruz</p>
     </footer>
 </body>
 </html>

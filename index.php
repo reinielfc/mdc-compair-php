@@ -28,7 +28,7 @@ echo <<< _END
         </section>
 _END;
 
-require_once './templates/aside.php';
+require_once './templates/aside-schedule-form.php';
 
 echo "\t</div>";
 

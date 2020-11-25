@@ -2,9 +2,10 @@
 
 $urls = array (
     'Home'             => './index.php',
-    'Air Conditioning' => './services.php#',
-    'Heating'          => './services.php#',
-    'Maintenance'      => './services.php#',
+    'Air Conditioning' => './services.php#ac-repair-services',
+    'Heating'          => './services.php#heating-repair',
+    'Maintenance'      => './services.php#hvac-maintenance',
+    'Schedule'         => './schedule-form.php',
     'Services'         => './services.php',
     'Careers'          => './careers.php',
     'About Us'         => './about-us.php',
@@ -16,7 +17,7 @@ echo <<< _END
 <html lang=en>
 <head>
     <title>$title | CompAir</title>
-    <link rel="icon" href="images/favicon.svg">
+    <link rel="icon" href="img/favicon.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/contact-form.css">
     <meta charset="UTF-8">
@@ -25,13 +26,21 @@ echo <<< _END
 <body>
     <header id="main-header">
         <div class="container">
-            <!--<h1>CompAir</h1>-->
             <div class="left">
-                <a href="index.php"><img src="images/logo.svg" alt="CompAir"></a>
-                <h2>HVAC Installation <br> Maintenance & Repair</h2>
+                <a href="index.php"><img src="img/logo.svg" alt="CompAir"></a>
+                <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
-                <h3>Call Us: <i style="font-weight: 100;">(305) 555-1247</i></h3>
+                <table>
+                    <tr>
+                        <td style="text-align: right; font-weight: bold;">Call Us:</td>
+                        <td style="text-align: left;">(305) 555-1247</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right; font-weight: bold;">Email Us:</td>
+                        <td style="text-align: left;"><a href="mailto: contact@compair.com">contact@compair.com</a></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </header>
@@ -41,13 +50,9 @@ echo <<< _END
             <ul>\n
 _END;
 
-
-
 foreach ($urls as $topic => $url) {
     $current = ($title == $topic) ? ' class="active"' : '';
-    echo <<< _END
-                    <li><a href="$url"$current>$topic</a></li>\n
-    _END;
+    echo "\t\t\t\t<li><a href=\"$url\"$current>$topic</a></li>\n";
 }
 
 echo <<< _END
@@ -55,4 +60,5 @@ echo <<< _END
         </div>
     </nav>\n\n
 _END;
+
 ?>
