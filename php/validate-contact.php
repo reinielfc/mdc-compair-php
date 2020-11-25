@@ -1,9 +1,5 @@
 <?php
 
-$fnameErr = $lnameErr = $emailErr = $phoneErr = $cityErr = $zipErr = $commentsErr = "";
-$fname = $lname = $email = $phone = $city = $zip = $comments = "";
-$ready = true;
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["fname"])) {

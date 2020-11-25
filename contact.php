@@ -1,5 +1,8 @@
 <?php
 $title = 'Contact';
+$fnameErr = $lnameErr = $emailErr = $phoneErr = $cityErr = $zipErr = $commentsErr = "";
+$fname = $lname = $email = $phone = $city = $zip = $comments = "";
+$ready = true;
 
 if (isset($_POST['submit'])) {
 
@@ -24,6 +27,7 @@ echo <<< _END
                 <h1>$title</h1>
             </div>
 
+
             <p>Should you have any questions and/or complaints:</p>
             <ul style="line-height: normal;">
                 <li>Call us at <b>305-555-1247</b>, or</li>
@@ -35,25 +39,25 @@ echo <<< _END
                 <table>
                     <tr>
                         <td>
-                            <label for="fname">First Name <span>* $fnameErr</span> </label>
+                            <label for="fname">First Name <span>*$fnameErr</span> </label>
                             <input type="text" name="fname" id="fname" placeholder="John" value="$fname" required>
                         </td>
-                        <td><label for="lname">Last Name <span>* $lnameErr</span> </label>
+                        <td><label for="lname">Last Name <span>*$lnameErr</span> </label>
                             <input type="text" name="lname" id="lname" placeholder="Doe" value="$lname" required></td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Email <span>* $emailErr</span> </label>
+                            <label for="email">Email <span>*$emailErr</span> </label>
                             <input type="text" name="email" id="email" placeholder="email@example.com" autocomplete="off" value="$email" required>
                         </td>
                         <td>
-                            <label for="phone">Phone Number <span>* $phoneErr</span> </label>
-                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" value="$phone" required>
+                            <label for="phone">Phone Number <span>*$phoneErr</span> </label>
+                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" value="$phone" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="city">City <span>* $cityErr</span> </label>
+                            <label for="city">City <span>*$cityErr</span> </label>
                             <input type="text" name="city" id="city" placeholder="Miami" value="$city" required>
                         </td>
                         <td>
@@ -63,7 +67,7 @@ echo <<< _END
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <label for="comments">Comments <span>* $commentsErr</span> </label>
+                            <label for="comments">Comments <span>*$commentsErr</span> </label>
                             <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." value="$comments" required></textarea>
                         </td>
                     </tr>
@@ -72,11 +76,11 @@ echo <<< _END
                             <label>I'd Prefer To Be Contacted By</label>
                             <ul class="choice-list">
                                 <li>
-                                    <input type="radio" name="contact_pref" id="email-pref" value="email">
+                                    <input type="radio" name="contact_pref" id="email-pref" value="email" checked="true">
                                     <label for="email-pref">Email</label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="contact_pref" id="phone-pref" value="phone">
+                                    <input type="radio" name="contact_pref" id="phone-pref" value="phone" checked="false">
                                     <label for="phone-pref">Phone</label>
                                 </li>
                             </ul>
@@ -114,6 +118,7 @@ echo <<< _END
                         <td colspan="2">
                             <p><span>*</span> Check that all fields with an asterisk are filled.</p>
                             <input type="submit" name="submit" value="SUBMIT">
+                            <p></p>
                         </td>
                     </tr>
                 </table>
@@ -121,8 +126,8 @@ echo <<< _END
         </section>
 _END;
 
-//require_once './templates/aside.php';
-require_once './templates/contact-table-print.php';
+require_once './templates/aside.php';
+//require_once './templates/contact-table-print.php';
 
 echo "\t</div>";
 
