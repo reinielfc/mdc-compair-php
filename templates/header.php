@@ -1,17 +1,5 @@
 <?php
 
-$urls = array (
-    'Home'             => './index.php',
-    'Air Conditioning' => './services.php#ac-repair-services',
-    'Heating'          => './services.php#heating-repair',
-    'Maintenance'      => './services.php#hvac-maintenance',
-    'Schedule'         => './schedule-form.php',
-    'Services'         => './services.php',
-    'Careers'          => './careers.php',
-    'About Us'         => './about-us.php',
-    'Contact'          => './contact.php'
-);
-
 echo <<< _END
 <!DOCTYPE html>
 <html lang=en>
@@ -19,7 +7,6 @@ echo <<< _END
     <title>$title | CompAir</title>
     <link rel="icon" href="img/favicon.svg">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/contact-form.css">
     <meta charset="UTF-8">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
@@ -31,13 +18,13 @@ echo <<< _END
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
-                <table>
+                <table style="font-weight: bold;">
                     <tr>
-                        <td style="text-align: right; font-weight: bold;">Call Us:</td>
-                        <td style="text-align: left;">(305) 555-1247</td>
+                        <td style="text-align: right;">Call Us:</td>
+                        <td style="text-align: left;"><i>(305) 555-1247</i></td>
                     </tr>
                     <tr>
-                        <td style="text-align: right; font-weight: bold;">Email Us:</td>
+                        <td style="text-align: right;">Email Us:</td>
                         <td style="text-align: left;"><a href="mailto: contact@compair.com">contact@compair.com</a></td>
                     </tr>
                 </table>
@@ -50,14 +37,26 @@ echo <<< _END
             <ul>\n
 _END;
 
-foreach ($urls as $topic => $url) {
-    $current = ($title == $topic) ? ' class="active"' : '';
-    echo "\t\t\t\t<li><a href=\"$url\"$current>$topic</a></li>\n";
+
+$links = array(
+    'Home'             => './index.php',
+    'Air Conditioning' => './services.php#ac-repair-services',
+    'Heating'          => './services.php#heating-repair',
+    'Maintenance'      => './services.php#hvac-maintenance',
+    'Services'         => './services.php',
+    'Careers'          => './careers.php',
+    'About Us'         => './about-us.php',
+    'Contact'          => './contact.php'
+);
+
+foreach ($links as $link => $url) {
+    echo "\t\t\t\t<li><a class=\"nav-link\" href=\"$url\">$link</a></li>\n";
 }
 
 echo <<< _END
             </ul>
         </div>
+    </nav>
 
     <script type="module">
         import {setCurrentPageToActive} from './js/utils.js';
