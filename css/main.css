@@ -1,3 +1,12 @@
+#color_theme {
+    color: #555; /*text*/
+    color: #f4f4f4;
+    color: #00112b;
+    color: #f60;
+    color: #dd0;
+    color: #2be;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,12 +21,12 @@ body {
     margin: 0;
 }
 
-a { 
-    color: goldenrod;
+a {
+    color: #f60;
 }
 
 .main {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .container {
@@ -35,8 +44,8 @@ a {
 }
 
 #main-header {
-    background-color: #00112bff;
-    color: white;
+    background-color: #00112b;
+    color: #ffffff;
     padding: 12px 0;
 }
 
@@ -52,7 +61,7 @@ a {
 }
 
 #main-header .left a {
-    border-right-color: white;
+    border-right-color: #ffffff;
     border-right-style: solid;
     border-right-width: 2px;
 }
@@ -63,8 +72,8 @@ a {
 
 #navbar {
     overflow: auto;
-    background-color: #00112bff;
-    color: white;
+    background-color: #00112b;
+    color: #ffffff;
 }
 
 #navbar ul {
@@ -84,7 +93,7 @@ a {
     text-align: center;
     font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 #navbar a:hover {
@@ -92,13 +101,13 @@ a {
 }
 
 #navbar a.active {
-    background: white;
-    color: #00112bff;
+    background: #ffffff;
+    color: #00112b;
     text-decoration: underline;
 }
 
 #showcase {
-    background-image: url('../images/showcase.jpg');
+    background-image: url('../img/showcase.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,22 +118,22 @@ a {
 }
 
 #showcase .foreground {
-    background-color: rgba(0, 17, 43, 0.2);
+    background-color: #00112b33;
     padding: 0 2%;
     vertical-align: middle;
     display: table-cell;
 }
 
 #showcase h1 {
-    color: white;
+    color: #ffffff;
     font-size: 50px;
     line-height: 1.6em;
     margin: 0;
 }
 
 #main-heading h1 {
-    background-color: #00112bff;
-    color: white;
+    background-color: #00112b;
+    color: #ffffff;
     padding: 20px;
     margin: 0;
     font-size: 40px;
@@ -133,44 +142,61 @@ a {
 #main {
     float: left;
     width: 60%;
-    background-color: white;
+    background-color: #ffffff;
     padding: 30px;
     padding-right: 15px;
     box-sizing: border-box;
 }
 
+#main button {
+    border: none;
+    padding: 10px;
+    font-size: 12pt;
+    background-color: #00112b;
+    color: #fff;
+}
+
+#main button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #sidebar {
     float: right;
     width: 40%;
-    color: white;
+    color: #ffffff;
     padding: 30px;
     padding-left: 15px;
     box-sizing: border-box;
 }
 
 #sidebar .container {
-    background: #00112bff;
+    background: #00112b;
     width: auto;
     padding: 10px;
     margin: 0;
 }
 
 #main-footer {
-    background: #00112bff;
-    color: white;
+    background: #00112b;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
 }
 
 #main-footer a {
-    color: white;
+    color: #ffffff;
 }
 
 #main-footer a:hover {
-    color: #ff6600;
+    color: #f60;
 }
 
 @media (max-width: 1200px) {
+
+    .container {
+        width: 98%;
+    }
 
     .main.container {
         width: 100%;
@@ -185,10 +211,5 @@ a {
         width: 100%;
         float: none;
     }
-
-    #main-header .right {
-        float: left;
-    }
-
 
 }
