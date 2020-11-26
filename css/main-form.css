@@ -39,8 +39,11 @@
     cursor: pointer;
 }
 
+#main form input[type="submit"]:active {
+    background-color: #f60;
+}
+
 #main form input[type="text"]:focus {
-    border-color: #f60;
     color: #f60;
     outline: none;
 }

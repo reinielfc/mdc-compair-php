@@ -1,4 +1,4 @@
-export {yearsAgo, setCurrentPageToActive};
+export {yearsAgo, setCurrentPageToActive, selectItemByValue};
 
 function yearsAgo(pastDate)
 {
@@ -27,3 +27,12 @@ function setCurrentPageToActive() {
     }
 
 }
+
+function selectItemByValue(element, value){
+    var i=0
+    for(; i < element.options.length; i++)
+    {
+      if(element.options[i].value == value)
+        element.selectedIndex = i;
+    }
+  }
