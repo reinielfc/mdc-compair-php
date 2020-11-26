@@ -166,6 +166,10 @@ a {
     cursor: pointer;
 }
 
+#main button:active {
+    background-color: #f60;
+}
+
 #sidebar {
     float: right;
     width: 30%;

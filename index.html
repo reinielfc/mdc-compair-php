@@ -36,19 +36,18 @@
 				<li><a class="nav-link" href="./services.html#ac-repair-services">Air Conditioning</a></li>
 				<li><a class="nav-link" href="./services.html#heating-repair">Heating</a></li>
 				<li><a class="nav-link" href="./services.html#hvac-maintenance">Maintenance</a></li>
-				<li><a class="nav-link" href="./schedule-form.html">Schedule</a></li>
 				<li><a class="nav-link" href="./services.html">Services</a></li>
 				<li><a class="nav-link" href="./careers.html">Careers</a></li>
 				<li><a class="nav-link" href="./about-us.html">About Us</a></li>
 				<li><a class="nav-link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
-    </nav>
 
-    <script type="module">
-        import {setCurrentPageToActive} from './js/utils.js';
-        setCurrentPageToActive();
-    </script>
+        <script type="module">
+            import {setCurrentPageToActive} from './js/utils.js';
+            setCurrentPageToActive();
+        </script>
+    </nav>
 
     <div class="main container">
         <section id="showcase">
@@ -72,8 +71,9 @@
             installation, maintenance, replacement, and repair needs. After we are done, you
             will notice the difference instantly, a new level of comfort in your life.
             CompAir your air.</p>
-        </section>		<aside id="sidebar">
+        </section>
 
+		<aside id="sidebar">
 
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
@@ -81,27 +81,23 @@
                 <form id="schedule-form" action="schedule-form.html" method="POST" autocomplete="off">
                     <p>Get Started Now</p>
                     <input type="text" name="fullname" id="schedule-form-fullname" placeholder="Full Name" required>
-                    <input type="email" name="email" id="shcedule-form-email" placeholder="Phone Number" required>
+                    <input type="email" name="email" id="shcedule-form-email" placeholder="Email" required>
+                    <input type="text" name="phone" id="shcedule-form-phone" placeholder="Phone Number" required>
                     <input type="text" name="address" id="shcedule-form-address" placeholder="Full Address" required>
                     <select name="project_type" id="schedule-form-project-type" required>
                         <option value="">Project Type</option>
-                        <option>AC Repair Services</option>
+                        <option>AC Repair</option>
                         <option>AC Installation</option>
-                        <option>Heating Repair</option>
-                        <option>Heating Installation</option>
-                        <option>Refrigeration Repair Services</option>
+                        <option>Heating Unit Repair</option>
+                        <option>Heating Unit Installation</option>
+                        <option>Refrigeration Unit Repair</option>
                         <option>HVAC Maintenance</option>
                     </select>
-                    <textarea name="project_desc" id="schedule-form-project-desc" cols="30" rows="10" required></textarea>
+                    <textarea name="project_desc" id="schedule-form-project-desc" cols="30" rows="10" placeholder="Project Description" required></textarea>
                     <input type="submit" name="submit" value="SCHEDULE NOW!">
                 </form>
             </div>
-
-            <div class="container">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique
-                temporibus minus, aspernatur pariatur molestias provident, odit qui quidem maiores,
-                adipisci voluptate? Inventore, repudiandae mollitia? Sed, omnis? Quas, repudiandae non.</p>
-            </div>		</aside>
+		</aside>
 	</div>
 
     <footer id="main-footer">

@@ -42,12 +42,12 @@
 				<li><a class="nav-link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
-    </nav>
 
-    <script type="module">
-        import {setCurrentPageToActive} from './js/utils.js';
-        setCurrentPageToActive();
-    </script>
+        <script type="module">
+            import {setCurrentPageToActive} from './js/utils.js';
+            setCurrentPageToActive();
+        </script>
+    </nav>
 
     <div class="main container">
         <section id="main">
@@ -93,7 +93,9 @@
             <button onclick="setProjectType('HVAC Maintenance')">Schedule a Maintenace Check</button>
             <button onclick="">Sign Up for Routine Maintenance Plan</button>
 
-        </section>		<aside id="sidebar">
+        </section>
+
+		<aside id="sidebar">
 
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
@@ -122,7 +124,8 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique
                 temporibus minus, aspernatur pariatur molestias provident, odit qui quidem maiores,
                 adipisci voluptate? Inventore, repudiandae mollitia? Sed, omnis? Quas, repudiandae non.</p>
-            </div>		</aside>
+            </div>
+		</aside>
         <script type='module'>
             import {selectItemByValue} from './js/utils.js';
             var select = document.getElementById('schedule-form-project-type');
@@ -133,7 +136,6 @@
                 select.style.animation = 'none'
                 select.offsetHeight;
                 select.style.animation = null;
-                select.scrollIntoView({behavior: "smooth", block: "center"});
             }
         </script>
 
