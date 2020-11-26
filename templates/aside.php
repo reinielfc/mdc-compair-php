@@ -1,13 +1,13 @@
 <?php
 
 function printAsides(...$asides) {
-    echo "\t\t<aside id=\"sidebar\">";
+    echo "\n\n\t\t<aside id=\"sidebar\">";
 
     foreach ($asides as $file) {
         require_once("./templates/" . $file);
     }
 
-    echo"\t\t</aside>\n";
+    echo"\n\t\t</aside>\n";
 }
 
 ?>

@@ -56,12 +56,12 @@ foreach ($links as $link => $url) {
 echo <<< _END
             </ul>
         </div>
-    </nav>
 
-    <script type="module">
-        import {setCurrentPageToActive} from './js/utils.js';
-        setCurrentPageToActive();
-    </script>\n\n
+        <script type="module">
+            import {setCurrentPageToActive} from './js/utils.js';
+            setCurrentPageToActive();
+        </script>
+    </nav>\n\n
 _END;
 
 ?>
