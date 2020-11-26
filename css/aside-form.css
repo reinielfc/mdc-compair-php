@@ -42,21 +42,26 @@ aside form input[type="submit"] {
     font-weight: bold;
     background-color: #f60;
     color: #fff;
+    margin: 0;
     transition: all .05s ease-in-out;
 }
 
 aside form input[type="submit"]:hover {
     cursor: pointer;
     transform: scale(1.05);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.47);
 }
 
 aside form input[type="submit"]:active {
     transform: scale(1);
+    box-shadow: none;
 }
 
 aside form .notice-animation {
     animation-name: notice-me;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+
 }
 
 @keyframes notice-me {

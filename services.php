@@ -64,7 +64,6 @@ echo <<<_END
                 select.style.animation = 'none'
                 select.offsetHeight;
                 select.style.animation = null;
-                select.scrollIntoView({behavior: "smooth", block: "center"});
             }
         </script>\n\n
 _END;
