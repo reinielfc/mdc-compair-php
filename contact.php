@@ -1,7 +1,5 @@
 <?php
 $title = 'Contact';
-$fnameErr = $lnameErr = $emailErr = $phoneErr = $cityErr = $zipErr = $commentsErr = "";
-$fname = $lname = $email = $phone = $city = $zip = $comments = "";
 $ready = true;
 
 if (isset($_POST['submit'])) {
@@ -14,6 +12,10 @@ if (isset($_POST['submit'])) {
         $conn->open();
         $conn->insertRecord('contact_form', $_POST);
         $conn->close();
+        $statusMsg = "Submitted!";
+        header("Location: index.php");
+    } else {
+        $statusMsg = "<span>*</span> Check that all fields with an asterisk are filled correctly.";
     }
 
 }
@@ -21,10 +23,12 @@ if (isset($_POST['submit'])) {
 require_once './templates/header.php';
 
 echo <<< _END
+    <link rel="stylesheet" type="text/css" href="css/main-form.css">
+
     <div class="main container">
         <section id="main">
             <div id="main-heading">
-                <h1>$title</h1>
+                <h1>Contact</h1>
             </div>
 
 
@@ -35,7 +39,7 @@ echo <<< _END
                 <li>Fill out the following form:</li>
             </ul>
 
-            <form id="contact-form" action="contact.php" method="POST" autocomplete="on">
+            <form action="contact.php" method="POST" autocomplete="on">
                 <table>
                     <tr>
                         <td>
@@ -76,11 +80,11 @@ echo <<< _END
                             <label>I'd Prefer To Be Contacted By</label>
                             <ul class="choice-list">
                                 <li>
-                                    <input type="radio" name="contact_pref" id="email-pref" value="email" checked="true">
+                                    <input type="radio" name="contact_pref" id="email-pref" value="email">
                                     <label for="email-pref">Email</label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="contact_pref" id="phone-pref" value="phone" checked="false">
+                                    <input type="radio" name="contact_pref" id="phone-pref" value="phone">
                                     <label for="phone-pref">Phone</label>
                                 </li>
                             </ul>
@@ -116,9 +120,8 @@ echo <<< _END
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <p><span>*</span> Check that all fields with an asterisk are filled.</p>
                             <input type="submit" name="submit" value="SUBMIT">
-                            <p></p>
+                            <p>$statusMsg</p>
                         </td>
                     </tr>
                 </table>
@@ -127,7 +130,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-//require_once './templates/contact-table-print.php';
+printAsides('aside-schedule-form.php', 'aside-dummy.php', 'contact-table-print.php');
 
 echo "\t</div>";
 

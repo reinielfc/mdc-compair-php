@@ -15,6 +15,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
+printAsides('aside-schedule-form.php', 'aside-dummy.php');
 
 echo "\t</div>";
 

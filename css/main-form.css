@@ -1,21 +1,21 @@
-#contact-form span {
+#main form span {
     color: #f00;
 }
 
-#contact-form table {
+#main form table {
     width: 100%;
 }
 
-#contact-form label {
+#main form label {
     display: block;
     margin: 8px 0;
 }
 
-#contact-form .container {
+#main form .container {
   margin: 0;
 }
 
-#contact-form input[type="text"]{
+#main form input[type="text"]{
     width: 90%;
     border: none;
     border-bottom: 2px solid;
@@ -24,7 +24,7 @@
     font-size: 12pt;
 }
 
-#contact-form input[type="submit"] {
+#main form input[type="submit"] {
     box-sizing: border-box;
     border: none;
     width: 150px;
@@ -34,32 +34,35 @@
     color: #fff;
 }
 
-#contact-form input[type="submit"]:hover {
+#main form input[type="submit"]:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-#contact-form input[type="text"]:focus {
-    border-color: #f60;
+#main form input[type="submit"]:active {
+    background-color: #f60;
+}
+
+#main form input[type="text"]:focus {
     color: #f60;
     outline: none;
 }
 
-#contact-form textarea:focus {
+#main form textarea:focus {
     border-color: #00112b;
 }
 
-#contact-form input[type="text"]:placeholder-shown,
-#contact-form textarea:placeholder-shown {
+#main form input[type="text"]:placeholder-shown,
+#main form textarea:placeholder-shown {
     font-style: italic;
 }
 
-#contact-form input[type="text"]:focus::placeholder,
-#contact-form textarea:focus::placeholder {
+#main form input[type="text"]:focus::placeholder,
+#main form textarea:focus::placeholder {
     color: transparent;
 }
 
-#contact-form textarea {
+#main form textarea {
     box-sizing: border-box;
     resize: none;
     width: 100%;
@@ -69,17 +72,17 @@
     font-family: inherit;
 }
 
-#contact-form .choice-list {
+#main form .choice-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#contact-form .choice-list label {
+#main form .choice-list label {
     display: inline;
 }
 
-#contact-form select {
+#main form select {
     width: 200px;
     height: 25px;
 }

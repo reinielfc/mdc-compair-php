@@ -1,7 +1,6 @@
 <?php
 echo <<< _END
 \n
-        <aside id="sidebar">
             <div class="container">
 _END;
 
@@ -68,8 +67,7 @@ $conn->close();
 $result->close();
 
 echo <<< _END
-            </div>
-        </aside>\n
+            </div>\n
 _END;
 
 ?>

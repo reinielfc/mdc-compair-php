@@ -1,0 +1,66 @@
+aside form {
+    color: #fff;
+    padding: 20px;
+}
+
+aside form > *{
+    display: block;
+    width: 100%;
+    margin: 15px 0px;
+    padding: 8px 6px;
+    font-family: inherit;
+}
+
+aside form p {
+    margin: 0;
+    padding: 0;
+}
+
+aside form textarea {
+    resize: none;
+}
+
+aside form input {
+    color: #555;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+aside form input:focus {
+    color: #f60;
+    font-weight: bold;
+}
+
+aside form input:focus::placeholder {
+    color: #555;
+    font-weight: normal;
+}
+
+aside form input[type="submit"] {
+    border: none;
+    font-size: 150%;
+    font-weight: bold;
+    background-color: #f60;
+    color: #fff;
+    transition: all .05s ease-in-out;
+}
+
+aside form input[type="submit"]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+aside form input[type="submit"]:active {
+    transform: scale(1);
+}
+
+aside form .notice-animation {
+    animation-name: notice-me;
+    animation-duration: 1s;
+}
+
+@keyframes notice-me {
+    50% {
+        transform: scale(1.05);
+    }
+}
