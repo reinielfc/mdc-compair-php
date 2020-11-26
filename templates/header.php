@@ -58,7 +58,11 @@ foreach ($urls as $topic => $url) {
 echo <<< _END
             </ul>
         </div>
-    </nav>\n\n
+
+    <script type="module">
+        import {setCurrentPageToActive} from './js/utils.js';
+        setCurrentPageToActive();
+    </script>\n\n
 _END;
 
 ?>

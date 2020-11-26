@@ -9,7 +9,7 @@ echo <<< _END
                 <h1>$title</h1>
             </div>
 
-            <p> Started in 2012, by father Orlando and son Ronaldo Hernandez, CompAir was founded with one mission in mind; to
+            <p> Started <span id="years">in 2012</span>, by father Orlando and son Ronaldo Hernandez, CompAir was founded with one mission in mind; to
             provide a better service, at a lower price. Family-owned and operated, we understand the frustration of having our
             appliances shut down at the worst time possible. That is why we are committed to offering emergency services 24/7,
             or (if the problem is bad enough) temporary replacements, all so that the comfort of your life is not immediately
@@ -48,6 +48,19 @@ echo <<< _END
             </ul>
             <p>*We also offer services to surrounding areas.</p>
         </section>
+
+        <script type="module">
+            import {yearsAgo} from './js/utils.js';
+
+            // Set the date that the company was established
+            var est = new Date('12/21/2012');
+
+            // Create a variable called yearsAgo to hold the element whose id attribute has a value of message
+            var years = document.getElementById('years');
+
+            // Write the message into that element.
+            years.textContent = yearsAgo(est) + ' years ago';
+        </script>
 _END;
 
 require_once './templates/aside.php';
