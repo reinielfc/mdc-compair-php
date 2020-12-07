@@ -54,6 +54,7 @@ require_once './templates/aside.php';
 printAsides('aside-schedule-form.php', 'aside-dummy.php');
 
 echo <<<_END
+
         <script type='module'>
             import {selectItemByValue} from './js/utils.js';
             var select = document.getElementById('schedule-form-project-type');
@@ -61,7 +62,7 @@ echo <<<_END
                 selectItemByValue(select, projectType);
                 select.scrollIntoView({behavior: "smooth", block: "center"});
                 select.classList.add("notice-animation");
-                select.style.animation = 'none'
+                select.style.animation = 'none';
                 select.offsetHeight;
                 select.style.animation = null;
             }
