@@ -25,7 +25,7 @@ echo <<< _END
                     </tr>
                     <tr>
                         <td style="text-align: right;">Email Us:</td>
-                        <td style="text-align: left;"><a href="mailto: contact@compair.com">contact@compair.com</a></td>
+                        <td style="text-align: left;"><a href="mailto:contact@compair.com">contact@compair.com</a></td>
                     </tr>
                 </table>
             </div>

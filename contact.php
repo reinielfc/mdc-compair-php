@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
         $conn->insertRecord('contact_form', $_POST);
         $conn->close();
         $statusMsg = "Submitted!";
-        header("Location: index.php");
     } else {
         $statusMsg = "<span>*</span> Check that all fields with an asterisk are filled correctly.";
     }
@@ -35,7 +34,7 @@ echo <<< _END
             <p>Should you have any questions and/or complaints:</p>
             <ul style="line-height: normal;">
                 <li>Call us at <b>305-555-1247</b>, or</li>
-                <li>Email us at <a href="mailto: contact@compair.com">contact@compair.com</a>, or</li>
+                <li>Email us at <a href="mailto:contact@compair.com">contact@compair.com</a>, or</li>
                 <li>Fill out the following form:</li>
             </ul>
 
@@ -130,7 +129,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-printAsides('aside-schedule-form.php', 'aside-dummy.php', 'contact-table-print.php');
+printAsides('aside-schedule-form.php', 'aside-dummy.php', 'aside-contact-table-print.php');
 
 echo "\t</div>";
 
