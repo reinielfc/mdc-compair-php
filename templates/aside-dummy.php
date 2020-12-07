@@ -1,6 +1,5 @@
 <?php
 echo <<< _END
-\n
             <div class="container">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique
                 temporibus minus, aspernatur pariatur molestias provident, odit qui quidem maiores,

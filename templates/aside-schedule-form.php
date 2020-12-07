@@ -1,6 +1,5 @@
 <?php
 echo <<< _END
-\n
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
             <div class="container">
