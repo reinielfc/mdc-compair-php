@@ -1,8 +1,5 @@
 <?php
-echo <<< _END
-\n
-            <div class="container">
-_END;
+echo "\t\t\t<div class=\"container\">";
 
 require_once './php/DBConnection.php';
 
@@ -40,8 +37,8 @@ for ($j = 0; $j < $rows; ++$j) {
     $r9  = htmlspecialchars($row[9]);
     $r10 = htmlspecialchars($row[10]);
 
-    echo <<<_END
-    <pre style="white-space: pre-wrap">
+    echo "\n" . <<<_END
+                    <pre style="white-space: pre-wrap">
             Form ID: $r0
          First Name: $r1
           Last Name: $r2
@@ -52,22 +49,19 @@ for ($j = 0; $j < $rows; ++$j) {
     Contact Through: $r8
     Survey Response: $r9
     Join Email List: $r10
-           Comments:
-    \n$r7\n
-    </pre>
-    <form action='contact.php' method='post'>
-    <input type='hidden' name='delete' value='yes'>
-    <input type='hidden' name='form_id' value='$r0'>
-    <input type='submit' value='DELETE RECORD'></form>
-_END;
+           Comments: $r7
+                    </pre>\n
+                    <form action='contact.php' method='post'>
+                        <input type='hidden' name='delete' value='yes'>
+                        <input type='hidden' name='form_id' value='$r0'>
+                        <input type='submit' value='DELETE RECORD'>
+                    </form>\n
+    _END;
 
 }
 
 $conn->close();
 $result->close();
 
-echo <<< _END
-            </div>\n
-_END;
-
+echo "\t\t\t</div>";
 ?>
