@@ -129,7 +129,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-printAsides('aside-schedule-form.php', 'aside-dummy.php', 'aside-contact-table-print.php');
+printAsides('aside-schedule-form.php', 'aside-dummy.php');//, 'aside-contact-table-print.php');
 
 echo "\t</div>";
 
