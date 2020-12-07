@@ -1,0 +1,18 @@
+- ALL
+    - Aside Ad for 24/7 services
+    - Validate through https://validator.w3.org/
+- ALL Forms
+    - Add POST/Redirect/GET (optional)
+    - Add reCAPTCHA (optional)
+    - Use divs instead of tables (optional)
+- services.php
+    - Add text content to each section
+    - Add showcase picture
+    - Fix weird navigation bar tab glitch
+- careers.php
+    x Add text content
+    - Add showcase picture
+    - Add positions available (retrieved from database)
+    - Add application form
+- about-us.php
+    - Add showcase picture
