@@ -59,9 +59,14 @@ echo <<< _END
 
         <script type="module">
             import {setCurrentPageToActive} from './js/utils.js';
-            setCurrentPageToActive();
+            window.addEventListener('locationchange', setCurrentPageToActive());
+            window.addEventListener('hashchange', setCurrentPageToActive, false);
         </script>
     </nav>\n\n
 _END;
 
 ?>
+
+<script>
+    window.onhashchange
+</script>
