@@ -72,6 +72,11 @@ aside form .notice-animation {
 
 }
 
+aside #application-form input,
+aside #application-form textarea {
+    margin: 10px 0px;
+}
+
 @keyframes notice-me {
     0% {
         color: red;

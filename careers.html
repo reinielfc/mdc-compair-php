@@ -95,8 +95,10 @@
                     </tr>
                 </tbody>
             </table>
-            <p>* Click on a position to apply for it.</p>		</section>
-        <script type="text/javascript">
+            <p>* Click on a position to apply for it.</p>
+		</section>
+
+        <script>
             function setPosition(positionID, position) {
                 var formPositionTitle = document.getElementById('position');
                 var formPositionID = document.getElementById('position-id');
@@ -107,16 +109,8 @@
             }
         </script>
 
-
 		<aside id="sidebar">
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
-
-            <style>
-                aside #application-form input,
-                aside #application-form textarea {
-                    margin: 10px 0px;
-                }
-            </style>
 
             <div class="container">
                 <form id="application-form" action="application-form.php" method="POST" autocomplete="off">
@@ -132,7 +126,7 @@
                     <label for="application-form-phone">Phone Number</label>
                     <input type="tel" name="phone" id="application-form-phone" placeholder="305-555-7777" required>
 
-                    <label for="appplication-form-resume">Upload Resume</label>
+                    <label for="application-form-resume">Upload Resume</label>
                     <input type="file" id="application-form-resume">
 
                     <label for="application-form-cover-letter">Cover Letter</label>
