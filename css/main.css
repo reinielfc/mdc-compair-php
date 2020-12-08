@@ -142,7 +142,7 @@ a {
 
 #main {
     float: left;
-    width: 70%;
+    width: 60%;
     background-color: #ffffff;
     padding: 30px;
     padding-right: 15px;
@@ -168,7 +168,7 @@ a {
 
 #sidebar {
     float: right;
-    width: 30%;
+    width: 40%;
     padding: 30px;
     padding-left: 15px;
     box-sizing: border-box;
