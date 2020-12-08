@@ -1,4 +1,4 @@
-export {yearsAgo, setCurrentPageToActive, selectOptionByValue as selectItemByValue};
+export {yearsAgo, setCurrentPageToActive, selectOptionByValue};
 
 function yearsAgo(pastDate)
 {
@@ -36,6 +36,5 @@ function selectOptionByValue(element, value){
     {
       if(element.options[i].value == value)
         element.selectedIndex = i;
-        break;
     }
 }
