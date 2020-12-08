@@ -22,10 +22,12 @@ function setCurrentPageToActive() {
     var curLink = window.location.href;
 
     for (let i = 0; i < navLinks.length; i++) {
-        if (navLinks.item(i).href == curLink)
+        if (navLinks.item(i).href == curLink) {
             navLinks.item(i).setAttribute('class', 'nav-link active');
+        } else {
+            navLinks.item(i).setAttribute('class', 'nav-link');
+        }
     }
-
 }
 
 function selectItemByValue(element, value){
