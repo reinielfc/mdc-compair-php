@@ -99,11 +99,9 @@
         <script type="text/javascript">
             function setPosition(positionID, position) {
                 var formPositionTitle = document.getElementById('position');
-                var formPosition = document.getElementByID('application-form-position');
-                var formPositionID = document.getElementById('position-id')
+                var formPositionID = document.getElementById('position-id');
 
                 formPositionTitle.textContent = position;
-                formPosition.setAttribute('value', position);
                 formPositionID.setAttribute('value', positionID);
 
             }
@@ -125,9 +123,6 @@
                     <h3>Apply for <span id="position">this position</span>.</h3>
                     <p>Do you wish to join our team? Please send us your resume and fill out the fields below:</p>
 
-                    <label for="application-form-position">Position</label>
-                    <input type="text" name="position" id="application-form-position" placeholder="Select position from the left." value="" disabled required>
-
                     <label for="application-form-fullname">Full Name</label>
                     <input type="text" name="fullname" id="application-form-fullname" placeholder="John Doe" required>
 
@@ -137,14 +132,16 @@
                     <label for="application-form-phone">Phone Number</label>
                     <input type="tel" name="phone" id="shcedule-form-phone" placeholder="305-555-7777" required>
 
-                    <label for="application-form-project_desc">Cover Letter</label>
+                    <label for="appplication-form-resume">Upload Resume</label>
+                    <input type="file">
+
+                    <label for="application-form-cover-letter">Cover Letter</label>
                     <textarea name="cover_letter" id="application-form-cover-letter" cols="30" rows="10" placeholder="Type or paste your cover letter here..." required></textarea>
 
                     <input type="hidden" name="position_id" id="position-id">
                     <input type="submit" name="submit" value="SEND APPLICATION">
                 </form>
             </div>
-<input type="hidden">
 		</aside>
 	</div>
 
