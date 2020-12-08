@@ -67,10 +67,6 @@ a {
     transition: all .2s ease-in-out;
 }
 
-#main-header .left a img:hover {
-    transform: scale(1.05);
-}
-
 #main-header .right h3 {
     margin: 0;
 }
@@ -146,7 +142,7 @@ a {
 
 #main {
     float: left;
-    width: 70%;
+    width: 60%;
     background-color: #ffffff;
     padding: 30px;
     padding-right: 15px;
@@ -172,7 +168,7 @@ a {
 
 #sidebar {
     float: right;
-    width: 30%;
+    width: 40%;
     padding: 30px;
     padding-left: 15px;
     box-sizing: border-box;

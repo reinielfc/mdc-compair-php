@@ -67,5 +67,6 @@ aside form .notice-animation {
 @keyframes notice-me {
     50% {
         transform: scale(1.05);
+        color: #f00;
     }
 }
