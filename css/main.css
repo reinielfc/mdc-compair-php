@@ -43,6 +43,21 @@ a {
     float: right;
 }
 
+.table {
+    background-color: none;
+}
+
+.table th {
+    background-color: #00112b;
+    color: #fff;
+    padding: 10px;
+}
+
+.table td {
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
 #main-header {
     background-color: #00112b;
     color: #ffffff;
@@ -164,6 +179,15 @@ a {
 
 #main button:active {
     background-color: #f60;
+}
+
+#main #available-positions button{
+    border: inherit;
+    padding: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    color: inherit;
+    text-align: left;
 }
 
 #sidebar {
