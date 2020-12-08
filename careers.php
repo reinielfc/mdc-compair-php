@@ -8,9 +8,9 @@ echo <<< _END
             <div id="main-heading">
                 <h1>$title</h1>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ipsa optio
-            omnis hic et accusantium praesentium neque facere fugit vero. Autem vero molestiae
-            quibusdam, quod unde deleniti laboriosam veniam tempore!</p>
+            <p></p>To ensure customer satisfaction in our delivery of quality results, we need
+            a team of skilled and dedicated professionals. If you are interested in a career
+            with CompAir, please review our available positions:</p>
         </section>
 _END;
 
