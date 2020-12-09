@@ -6,9 +6,9 @@ echo <<< _END
                 <form id="schedule-form" action="schedule-form.php" method="POST" autocomplete="off">
                     <p>Get Started Now</p>
                     <input type="text" name="fullname" id="schedule-form-fullname" placeholder="Full Name" required>
-                    <input type="email" name="email" id="shcedule-form-email" placeholder="Email" required>
-                    <input type="text" name="phone" id="shcedule-form-phone" placeholder="Phone Number" required>
-                    <input type="text" name="address" id="shcedule-form-address" placeholder="Full Address" required>
+                    <input type="email" name="email" id="schedule-form-email" placeholder="Email" required>
+                    <input type="tel" name="phone" id="schedule-form-phone" placeholder="Phone Number" required>
+                    <input type="text" name="address" id="schedule-form-address" placeholder="Full Address" required>
                     <select name="project_type" id="schedule-form-project-type" required>
                         <option value="">Project Type</option>
                         <option>AC Repair</option>

@@ -15,7 +15,8 @@
   margin: 0;
 }
 
-#main form input[type="text"]{
+#main form input[type="text"],
+#main form input[type="tel"] {
     width: 90%;
     border: none;
     border-bottom: 2px solid;
@@ -43,6 +44,7 @@
     background-color: #f60;
 }
 
+#main form input[type="text"]:focus,
 #main form input[type="text"]:focus {
     color: #f60;
     outline: none;
@@ -53,11 +55,13 @@
 }
 
 #main form input[type="text"]:placeholder-shown,
+#main form input[type="tel"]:placeholder-shown,
 #main form textarea:placeholder-shown {
     font-style: italic;
 }
 
 #main form input[type="text"]:focus::placeholder,
+#main form input[type="tel"]:focus::placeholder,
 #main form textarea:focus::placeholder {
     color: transparent;
 }
@@ -85,4 +89,9 @@
 #main form select {
     width: 200px;
     height: 25px;
+}
+
+#status-message {
+    display: inline;
+    margin: 16px;
 }
