@@ -1,6 +1,7 @@
 <?php
 $title = 'Contact';
 $ready = true;
+$statusMsg = "<span>*</span> Check that all fields with an asterisk are filled correctly.";
 
 if (isset($_POST['submit'])) {
 
@@ -10,11 +11,9 @@ if (isset($_POST['submit'])) {
         require_once './php/DBConnection.php';
         $conn = new DBConnection();
         $conn->open();
-        $conn->insertRecord('contact_form', $_POST);
+        $conn->insertRecord('contacts', $_POST);
         $conn->close();
         $statusMsg = "Submitted!";
-    } else {
-        $statusMsg = "<span>*</span> Check that all fields with an asterisk are filled correctly.";
     }
 
 }
@@ -55,7 +54,7 @@ echo <<< _END
                         </td>
                         <td>
                             <label for="phone">Phone Number <span>*$phoneErr</span> </label>
-                            <input type="text" name="phone" id="phone" placeholder="305-555-7777" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" value="$phone" required>
+                            <input type="tel" name="phone" id="phone" placeholder="305-555-7777" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" value="$phone" required>
                         </td>
                     </tr>
                     <tr>
@@ -71,7 +70,7 @@ echo <<< _END
                     <tr>
                         <td colspan="2">
                             <label for="comments">Comments <span>*$commentsErr</span> </label>
-                            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." value="$comments" required></textarea>
+                            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Type your comments here..." required>$comments</textarea>
                         </td>
                     </tr>
                     <tr>
@@ -120,7 +119,7 @@ echo <<< _END
                     <tr>
                         <td colspan="2">
                             <input type="submit" name="submit" value="SUBMIT">
-                            <p>$statusMsg</p>
+                            <p id="status-message">$statusMsg</p>
                         </td>
                     </tr>
                 </table>
@@ -129,7 +128,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-printAsides('aside-schedule-form.php', 'aside-dummy.php');//, 'aside-contact-table-print.php');
+printAsides('aside-schedule-form.php');//, 'aside-dummy.php');//, 'aside-contact-table-print.php');
 
 echo "\t</div>";
 

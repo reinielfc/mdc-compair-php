@@ -6,22 +6,22 @@ require_once './php/DBConnection.php';
 $conn = new DBConnection();
 $conn->open();
 $conn = $conn->getConn();
-$table = 'contact_form';
+$table = 'contacts';
 
-if (isset($_POST['delete']) && isset($_POST['form_id'])) {
-    $form_id = $conn->real_escape_string($_POST['form_id']);
-    $query = "DELETE FROM contact_form WHERE form_id='$form_id'";
-    $result = $conn->query($query);
+if (isset($_POST['delete']) && isset($_POST['contact_id'])) {
+    $contact_id = $conn->real_escape_string($_POST['contact_id']);
+    $sql = "DELETE FROM contacts WHERE contact_id='$contact_id'";
+    $result = $conn->query($sql);
     if (!$result) echo "DELETE failed<br><br>";
 }
 
-$query = "SELECT * FROM $table";
-$result = $conn->query($query);
+$sql = "SELECT * FROM $table";
+$result = $conn->query($sql);
 if (!$result) die("Database access failed");
 
-$rows = $result->num_rows;
+$num_rows = $result->num_rows;
 
-for ($j = 0; $j < $rows; ++$j) {
+for ($i = 0; $i < $num_rows; ++$i) {
 
     $row = $result->fetch_array(MYSQLI_NUM);
 
@@ -48,12 +48,12 @@ for ($j = 0; $j < $rows; ++$j) {
            Zip Code: $r6
     Contact Through: $r8
     Survey Response: $r9
-    Join Email List: $r10
+    ioin Email List: $r10
            Comments: $r7
                     </pre>\n
                     <form action='contact.php' method='post'>
                         <input type='hidden' name='delete' value='yes'>
-                        <input type='hidden' name='form_id' value='$r0'>
+                        <input type='hidden' name='contact_id' value='$r0'>
                         <input type='submit' value='DELETE RECORD'>
                     </form>\n
     _END;

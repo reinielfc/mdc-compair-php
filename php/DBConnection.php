@@ -29,10 +29,10 @@ class DBConnection {
 
     function fetchFieldNames($table_name)
     {
-        $query = "SELECT * FROM $table_name";
+        $sql = "SELECT * FROM $table_name";
         $field_names = array();
 
-        if ($result = $this->conn->query($query))
+        if ($result = $this->conn->query($sql))
         {
             $fields = $result->fetch_fields();
 
