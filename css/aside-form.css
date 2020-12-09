@@ -11,9 +11,17 @@ aside form > *{
     font-family: inherit;
 }
 
-aside form p {
+aside form p,
+aside form h3 {
+    display: block;
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
+}
+
+aside form label {
+    padding: 0;
+    margin: 0;
 }
 
 aside form textarea {
@@ -64,8 +72,21 @@ aside form .notice-animation {
 
 }
 
+aside #application-form input,
+aside #application-form textarea {
+    margin: 10px 0px;
+}
+
 @keyframes notice-me {
+    0% {
+        color: red;
+    }
     50% {
         transform: scale(1.05);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.47);
+
+    }
+    100% {
+        color: red;
     }
 }
