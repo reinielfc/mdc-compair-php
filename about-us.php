@@ -49,8 +49,23 @@ echo <<< _END
             <p>*We also offer services to surrounding areas.</p>
         </section>
 
-        <script type="module">
-            import {yearsAgo} from './js/utils.js';
+        <script>
+            function yearsAgo(pastDate)
+            {
+                // Create a variable to hold a new Date object (defaults to now)
+                var today = new Date();
+
+                // Get the year this year
+                var year = today.getFullYear();
+
+                // Get difference between then & now in milliseconds
+                var difference = today.getTime() - pastDate.getTime();
+
+                // Divide by number of milliseconds to get years
+                difference = (difference / 31556900000);
+
+                return Math.floor(difference);
+            }
 
             // Set the date that the company was established
             var est = new Date('12/21/2012');
@@ -64,7 +79,7 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-printAsides('aside-schedule-form.php', 'aside-dummy.php');
+printAsides('aside-schedule-form.php');//, 'aside-dummy.php');
 
 echo "\t</div>";
 

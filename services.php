@@ -55,15 +55,24 @@ echo <<< _END
 _END;
 
 require_once './templates/aside.php';
-printAsides('aside-schedule-form.php', 'aside-dummy.php');
+printAsides('aside-schedule-form.php');//, 'aside-dummy.php');
 
 echo <<<_END
 
-        <script type='module'>
-            import {selectItemByValue} from './js/utils.js';
+        <script>
+            // used for <select> element, selects an <option> by its value
+            function selectOptionByValue(element, value){
+                for(var i=0; i < element.options.length; i++)
+                {
+                    if(element.options[i].value == value)
+                        element.selectedIndex = i;
+                }
+            }
+
             var select = document.getElementById('schedule-form-project-type');
+
             window.setProjectType = function setProjectType(projectType) {
-                selectItemByValue(select, projectType);
+                selectOptionByValue(select, projectType);
                 select.scrollIntoView({behavior: "smooth", block: "center"});
                 select.classList.add("notice-animation");
                 select.style.animation = 'none';

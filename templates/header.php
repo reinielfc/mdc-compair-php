@@ -20,7 +20,7 @@ echo <<< _END
             <div class="right">
                 <table style="font-weight: bold;">
                     <tr>
-                        <td style="text-align: right;">Call Us:</td>
+                        <td style="text-align: right;">Give us a call:</td>
                         <td style="text-align: left;"><i>(305) 555-1247</i></td>
                     </tr>
                     <tr>
@@ -57,8 +57,20 @@ echo <<< _END
             </ul>
         </div>
 
-        <script type="module">
-            import {setCurrentPageToActive} from './js/utils.js';
+        <script>
+            function setCurrentPageToActive() {
+                var navLinks = document.getElementsByClassName('nav-link');
+                var curLink = window.location.href;
+
+                for (let i = 0; i < navLinks.length; i++) {
+                    if (navLinks.item(i).href == curLink) {
+                        navLinks.item(i).setAttribute('class', 'nav-link active');
+                    } else {
+                        navLinks.item(i).setAttribute('class', 'nav-link');
+                    }
+                }
+            }
+
             window.addEventListener('locationchange', setCurrentPageToActive());
             window.addEventListener('hashchange', setCurrentPageToActive, false);
         </script>
@@ -66,7 +78,3 @@ echo <<< _END
 _END;
 
 ?>
-
-<script>
-    window.onhashchange
-</script>
