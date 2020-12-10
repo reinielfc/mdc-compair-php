@@ -7,6 +7,10 @@
     color: #2be;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
@@ -35,7 +39,7 @@ a {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: auto;
     overflow: hidden;
 }
@@ -63,15 +67,12 @@ a {
     padding: 5px;
 }
 
-.image {
-    background: url('../img/dummy.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 16px 0px;
+.image img {
+    margin: 8px 0px;
     width: 100%;
-    min-height: 300px;
-    text-align: center;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
 }
 
 #main-header {

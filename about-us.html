@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
     <title>About Us | CompAir</title>
     <link rel="icon" href="img/favicon.png">
@@ -8,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
+
 <body>
     <header id="main-header">
         <div class="container">
             <div class="left">
-                <a href="index.html"><img src="img/logo.svg" alt="CompAir"></a>
+                <a href="index.php"><img src="img/logo.svg" alt="CompAir"></a>
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
@@ -20,10 +22,6 @@
                     <tr>
                         <td style="text-align: right;">Give us a call:</td>
                         <td style="text-align: left;"><i>(305) 555-1247</i></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: right;">Email Us:</td>
-                        <td style="text-align: left;"><a href="mailto:contact@compair.com">contact@compair.com</a></td>
                     </tr>
                 </table>
             </div>
@@ -33,14 +31,14 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-				<li><a class="nav-link" href="./index.html">Home</a></li>
-				<li><a class="nav-link" href="./services.html#ac-repair-services">Air Conditioning</a></li>
-				<li><a class="nav-link" href="./services.html#heating-repair">Heating</a></li>
-				<li><a class="nav-link" href="./services.html#hvac-maintenance">Maintenance</a></li>
-				<li><a class="nav-link" href="./services.html">Services</a></li>
-				<li><a class="nav-link" href="./careers.html">Careers</a></li>
-				<li><a class="nav-link" href="./about-us.html">About Us</a></li>
-				<li><a class="nav-link" href="./contact.html">Contact</a></li>
+				<li><a class="nav-link" href="./index.php">Home</a></li>
+				<li><a class="nav-link" href="./services.php#ac-repair-services">Air Conditioning</a></li>
+				<li><a class="nav-link" href="./services.php#heating-repair">Heating</a></li>
+				<li><a class="nav-link" href="./services.php#hvac-maintenance">Maintenance</a></li>
+				<li><a class="nav-link" href="./services.php">Services</a></li>
+				<li><a class="nav-link" href="./careers.php">Careers</a></li>
+				<li><a class="nav-link" href="./about-us.php">About Us</a></li>
+				<li><a class="nav-link" href="./contact.php">Contact</a></li>
             </ul>
         </div>
 
@@ -69,7 +67,9 @@
                 <h1>About Us</h1>
             </div>
 
-            <div class="image" style=""></div>
+            <div class="image">
+                <img src="./img/dummy.png" alt="">
+            </div>
 
             <p> Started <span id="years">in 2012</span>, by father Orlando and son Ronaldo Hernandez, CompAir was founded with one mission in mind; to
             provide a better service, at a lower price. Family-owned and operated, we understand the frustration of having our
@@ -109,6 +109,9 @@
                 <li>Palmetto Bay</li>
             </ul>
             <p>*We also offer services to surrounding areas.</p>
+
+            <p>We are headquartered at <i>3162 Ridenour Street, Miami, FL 33176</i>:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28771.2255397859!2d-80.37598608257406!3d25.657925955762252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c6ceb77db401%3A0x2eace53248d8248b!2sMiami%2C%20FL%2033176!5e0!3m2!1sen!2sus!4v1607592981103!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
 
         <script>
@@ -143,7 +146,7 @@
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
             <div class="container">
-                <form id="schedule-form" action="schedule-form.html" method="POST" autocomplete="off">
+                <form id="schedule-form" action="schedule-form.php" method="POST" autocomplete="off">
                     <p>Get Started Now</p>
                     <input type="text" name="fullname" id="schedule-form-fullname" placeholder="Full Name" required>
                     <input type="email" name="email" id="schedule-form-email" placeholder="Email" required>
@@ -167,11 +170,11 @@
 
     <footer id="main-footer">
         <p>
-            <a href="index.html">Home</a> |
-            <a href="services.html">Services</a> |
-            <a href="careers.html">Careers</a> |
-            <a href="about-us.html">About Us</a> |
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Home</a> |
+            <a href="services.php">Services</a> |
+            <a href="careers.php">Careers</a> |
+            <a href="about-us.php">About Us</a> |
+            <a href="contact.php">Contact</a>
         </p>
         <p>Created By Reiniel Fernandez Cruz</p>
     </footer>

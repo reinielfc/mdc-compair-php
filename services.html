@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
     <title>Services | CompAir</title>
     <link rel="icon" href="img/favicon.png">
@@ -8,11 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
+
 <body>
     <header id="main-header">
         <div class="container">
             <div class="left">
-                <a href="index.html"><img src="img/logo.svg" alt="CompAir"></a>
+                <a href="index.php"><img src="img/logo.svg" alt="CompAir"></a>
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
@@ -20,10 +22,6 @@
                     <tr>
                         <td style="text-align: right;">Give us a call:</td>
                         <td style="text-align: left;"><i>(305) 555-1247</i></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: right;">Email Us:</td>
-                        <td style="text-align: left;"><a href="mailto:contact@compair.com">contact@compair.com</a></td>
                     </tr>
                 </table>
             </div>
@@ -33,14 +31,14 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-				<li><a class="nav-link" href="./index.html">Home</a></li>
-				<li><a class="nav-link" href="./services.html#ac-repair-services">Air Conditioning</a></li>
-				<li><a class="nav-link" href="./services.html#heating-repair">Heating</a></li>
-				<li><a class="nav-link" href="./services.html#hvac-maintenance">Maintenance</a></li>
-				<li><a class="nav-link" href="./services.html">Services</a></li>
-				<li><a class="nav-link" href="./careers.html">Careers</a></li>
-				<li><a class="nav-link" href="./about-us.html">About Us</a></li>
-				<li><a class="nav-link" href="./contact.html">Contact</a></li>
+				<li><a class="nav-link" href="./index.php">Home</a></li>
+				<li><a class="nav-link" href="./services.php#ac-repair-services">Air Conditioning</a></li>
+				<li><a class="nav-link" href="./services.php#heating-repair">Heating</a></li>
+				<li><a class="nav-link" href="./services.php#hvac-maintenance">Maintenance</a></li>
+				<li><a class="nav-link" href="./services.php">Services</a></li>
+				<li><a class="nav-link" href="./careers.php">Careers</a></li>
+				<li><a class="nav-link" href="./about-us.php">About Us</a></li>
+				<li><a class="nav-link" href="./contact.php">Contact</a></li>
             </ul>
         </div>
 
@@ -71,10 +69,11 @@
 
             <p>All our services are offered to both Commercial and Residential entities.</p>
 
-
             <h2 id="ac-repair-services">AC Repair Services</h2>
 
-            <div class="image" style=""></div>
+            <div class="image">
+                <img src="./img/air-conditioners.jpg" alt="Air Conditioners.">
+            </div>
 
             <p>The worst thing that can happen during Florida's scorching hot summer days is for your AC to suddenly stop working.
             Here comes CompAir to the rescue! With our 24/7 emmergency repair service, it's just a matter of giving us a call and
@@ -89,10 +88,11 @@
             of prefessionals will take care of the rest.</p>
             <button onclick="setProjectType('AC Installation')">Schedule an AC Installation</button>
 
-
             <h2 id="heating-repair">Heating Repair</h2>
 
-            <div class="image" style=""></div>
+            <div class="image">
+                <img src="./img/thermostat.jpg" alt="Thermostat.">
+            </div>
 
             <p>If you have a heating system at home, we have knowledgable heating repair technicians available for you. So your family
             does not get cold during the winter, we also offer our 24/7 emergency repair service for heating unit repairs.</p>
@@ -106,7 +106,9 @@
 
             <h2 id="refrigeration-repair-services">Refrigeration Repair Services</h2>
 
-            <div class="image" style=""></div>
+            <div class="image">
+                <img src="./img/freezer.jpg" alt="Grocery store freezer.">
+            </div>
 
             <p>Our 24/7 emergency repair service is extended to refrigeration equiment such as refrigerators, freezers, and ice machines.
             We fix all equipment makes and models, and so your food doesn't go bad we offer temporary replacements for small equiment.
@@ -117,7 +119,10 @@
 
             <h2 id="hvac-maintenance">HVAC Maintenance</h2>
 
-            <div class="image" style=""></div>
+            <div class="image">
+                <img src="./img/maintenance-worker.png" alt="Maintenance worker.">
+                <!--<a href='https://www.freepik.com/photos/man'>Man photo created by pressfoto - www.freepik.com</a>-->
+            </div>
 
             <p>Routine maintenance is necessary to make sure that your HVAC equipment has long lasting and efficient service life.
             CompAir offers you maintenance services to make sure that this happens. During a maintenance inspection, our technicians
@@ -131,7 +136,7 @@
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
             <div class="container">
-                <form id="schedule-form" action="schedule-form.html" method="POST" autocomplete="off">
+                <form id="schedule-form" action="schedule-form.php" method="POST" autocomplete="off">
                     <p>Get Started Now</p>
                     <input type="text" name="fullname" id="schedule-form-fullname" placeholder="Full Name" required>
                     <input type="email" name="email" id="schedule-form-email" placeholder="Email" required>
@@ -152,6 +157,7 @@
             </div>
 		</aside>
 
+        <script src="./js/utils.js"></script>
         <script>
             // used for <select> element, selects an <option> by its value
             function selectOptionByValue(element, value){
@@ -166,11 +172,7 @@
 
             window.setProjectType = function setProjectType(projectType) {
                 selectOptionByValue(select, projectType);
-                select.scrollIntoView({behavior: "smooth", block: "center"});
-                select.classList.add("notice-animation");
-                select.style.animation = 'none';
-                select.offsetHeight;
-                select.style.animation = null;
+                noticeMe(select);
             }
         </script>
 
@@ -178,11 +180,11 @@
 
     <footer id="main-footer">
         <p>
-            <a href="index.html">Home</a> |
-            <a href="services.html">Services</a> |
-            <a href="careers.html">Careers</a> |
-            <a href="about-us.html">About Us</a> |
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Home</a> |
+            <a href="services.php">Services</a> |
+            <a href="careers.php">Careers</a> |
+            <a href="about-us.php">About Us</a> |
+            <a href="contact.php">Contact</a>
         </p>
         <p>Created By Reiniel Fernandez Cruz</p>
     </footer>
