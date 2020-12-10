@@ -7,6 +7,11 @@
     color: #2be;
 }
 
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -56,6 +61,17 @@ a {
 .table td {
     background-color: #f4f4f4;
     padding: 5px;
+}
+
+.image {
+    background: url('../img/dummy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 16px 0px;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
 }
 
 #main-header {
@@ -221,7 +237,7 @@ a {
     color: #f60;
 }
 
-@media (max-width: 1300px) {
+@media all and (max-width: 1300px) {
 
     #main {
         width: 60%;
@@ -241,7 +257,7 @@ a {
 
 }
 
-@media (max-width: 950px) {
+@media all and (max-width: 950px) {
     #main {
         width: 100%;
         float: none;

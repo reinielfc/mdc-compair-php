@@ -45,7 +45,7 @@
 }
 
 #main form input[type="text"]:focus,
-#main form input[type="text"]:focus {
+#main form input[type="tel"]:focus {
     color: #f60;
     outline: none;
 }
