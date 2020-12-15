@@ -20,6 +20,11 @@ $header
             <p>All our services are offered to both Commercial and Residential entities.</p>
 
             <h2 id="ac-repair-services">AC Repair Services</h2>
+
+            <div class="image">
+                <img src="./img/air-conditioners.jpg" alt="Air Conditioners.">
+            </div>
+
             <p>The worst thing that can happen during Florida's scorching hot summer days is for your AC to suddenly stop working.
             Here comes CompAir to the rescue! With our 24/7 emmergency repair service, it's just a matter of giving us a call and
             one of our certified technicians will be there taking care of the problem in no time.</p>
@@ -34,6 +39,11 @@ $header
             <button onclick="setProjectType('AC Installation')">Schedule an AC Installation</button>
 
             <h2 id="heating-repair">Heating Repair</h2>
+
+            <div class="image">
+                <img src="./img/thermostat.jpg" alt="Thermostat.">
+            </div>
+
             <p>If you have a heating system at home, we have knowledgable heating repair technicians available for you. So your family
             does not get cold during the winter, we also offer our 24/7 emergency repair service for heating unit repairs.</p>
             <button onclick="setProjectType('Heating Unit Repair')">Schedule a Heating Unit Repair</button>
@@ -45,6 +55,11 @@ $header
             <button onclick="setProjectType('Heating Unit Installation')">Schedule a Heating Unit Installation</button>
 
             <h2 id="refrigeration-repair-services">Refrigeration Repair Services</h2>
+
+            <div class="image">
+                <img src="./img/freezer.jpg" alt="Grocery store freezer.">
+            </div>
+
             <p>Our 24/7 emergency repair service is extended to refrigeration equiment such as refrigerators, freezers, and ice machines.
             We fix all equipment makes and models, and so your food doesn't go bad we offer temporary replacements for small equiment.
             We also offer refigeration repair services for commercial entities such as restaurants, retail food establishments, food
@@ -53,6 +68,12 @@ $header
             <button onclick="setProjectType('Refrigeration Unit Repair')">Schedule a Refrigeration Unit Repair</button>
 
             <h2 id="hvac-maintenance">HVAC Maintenance</h2>
+
+            <div class="image">
+                <img src="./img/maintenance-worker.png" alt="Maintenance worker.">
+                <a class="attribution" href='https://www.freepik.com/photos/man'>Man photo created by pressfoto - www.freepik.com</a>
+            </div>
+
             <p>Routine maintenance is necessary to make sure that your HVAC equipment has long lasting and efficient service life.
             CompAir offers you maintenance services to make sure that this happens. During a maintenance inspection, our technicians
             will check and calibrate your system, afterwards they will notify you of any concerns that they have about your system,

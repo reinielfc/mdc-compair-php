@@ -31,6 +31,10 @@ $header
             and we will send you the right person for the job. Choose CompAir and rest easy knowing that you will have your desired
             level of comfort in no time.</p>
 
+            <div class="image">
+                <img class="fit" src="./img/delivery-van.png" alt="">
+            </div>
+
             <h2>Facts About Us</h2>
 
             <ol>
@@ -55,6 +59,9 @@ $header
                 <li>Palmetto Bay</li>
             </ul>
             <p>*We also offer services to surrounding areas.</p>
+
+            <p>We are headquartered at <i>3162 Ridenour Street, Miami, FL 33176</i>:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28771.2255397859!2d-80.37598608257406!3d25.657925955762252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c6ceb77db401%3A0x2eace53248d8248b!2sMiami%2C%20FL%2033176!5e0!3m2!1sen!2sus!4v1607592981103!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
 
         <script>
