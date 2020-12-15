@@ -10,6 +10,7 @@ $header = <<< _END
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 </head>
+
 <body>
     <header id="main-header">
         <div class="container">
@@ -18,42 +19,22 @@ $header = <<< _END
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
-                <table style="font-weight: bold;">
-                    <tr>
-                        <td style="text-align: right;">Give us a call:</td>
-                        <td style="text-align: left;"><i>(305) 555-1247</i></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: right;">Email Us:</td>
-                        <td style="text-align: left;"><a href="mailto:contact@compair.com">contact@compair.com</a></td>
-                    </tr>
-                </table>
+                <p>Give us a call: <i>(305) 555-1247</i></p>
             </div>
         </div>
     </header>
 
     <nav id="navbar">
         <div class="container">
-            <ul>\n
-_END;
-
-
-$links = array(
-    'Home'             => './index.php',
-    'Air Conditioning' => './services.php#ac-repair-services',
-    'Heating'          => './services.php#heating-repair',
-    'Maintenance'      => './services.php#hvac-maintenance',
-    'Services'         => './services.php',
-    'Careers'          => './careers.php',
-    'About Us'         => './about-us.php',
-    'Contact'          => './contact.php'
-);
-
-foreach ($links as $link => $url) {
-    echo "\t\t\t\t<li><a class=\"nav-link\" href=\"$url\">$link</a></li>\n";
-}
-
-echo <<< _END
+            <ul>
+				<li><a class="nav-link hide-mobile" href="./index.php">Home</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#ac-repair-services">Air Conditioning</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#heating-repair">Heating</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#hvac-maintenance">Maintenance</a></li>
+				<li><a class="nav-link" href="./services.php">Services</a></li>
+				<li><a class="nav-link" href="./careers.php">Careers</a></li>
+				<li><a class="nav-link" href="./about-us.php">About Us</a></li>
+				<li><a class="nav-link" href="./contact.php">Contact</a></li>
             </ul>
         </div>
 
