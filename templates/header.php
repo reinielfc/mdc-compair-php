@@ -56,23 +56,26 @@ echo <<< _END
             </ul>
         </div>
 
-        <script>
-            function setCurrentPageToActive() {
-                var navLinks = document.getElementsByClassName('nav-link');
-                var curLink = window.location.href;
+    <script>
+        function setCurrentPageToActive() {
+            var navLinks = document.getElementsByClassName('nav-link');
+            var curLink = window.location.href;
 
-                for (let i = 0; i < navLinks.length; i++) {
-                    if (navLinks.item(i).href == curLink) {
-                        navLinks.item(i).setAttribute('class', 'nav-link active');
-                    } else {
-                        navLinks.item(i).setAttribute('class', 'nav-link');
-                    }
+            for (let i = 0; i < navLinks.length; i++) {
+                var element = navLinks.item(i);
+                var elementClass = element.getAttribute('class');
+                if (element.href == curLink) {
+                    element.setAttribute('class', elementClass + " active");
+                } else {
+                    elementClass = elementClass.replace(" active", "");
+                    element.setAttribute('class', elementClass)
                 }
             }
+        }
 
-            window.addEventListener('locationchange', setCurrentPageToActive());
-            window.addEventListener('hashchange', setCurrentPageToActive, false);
-        </script>
+        window.addEventListener('locationchange', setCurrentPageToActive());
+        window.addEventListener('hashchange', setCurrentPageToActive, false);
+    </script>
     </nav>
 _END;
 ?>

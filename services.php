@@ -84,6 +84,7 @@ $header
 
         $sidebar
 
+        <script src="./js/utils.js"></script>
         <script>
             // used for <select> element, selects an <option> by its value
             function selectOptionByValue(element, value){
@@ -98,11 +99,7 @@ $header
 
             window.setProjectType = function setProjectType(projectType) {
                 selectOptionByValue(select, projectType);
-                select.scrollIntoView({behavior: "smooth", block: "center"});
-                select.classList.add("notice-animation");
-                select.style.animation = 'none';
-                select.offsetHeight;
-                select.style.animation = null;
+                noticeMe(select);
             }
         </script>
     </div>
