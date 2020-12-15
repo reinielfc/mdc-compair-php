@@ -1,6 +1,5 @@
 <?php
-echo <<< _END
-\n
+$footer = <<< _END
     <footer id="main-footer">
         <p>
             <a href="index.php">Home</a> |

@@ -1,8 +1,16 @@
 <?php
 $title = 'About Us';
+define('FILENAME', pathinfo(__FILE__, PATHINFO_FILENAME) . ".php");
+
 require_once './templates/header.php';
+require_once './templates/sidebar.php';
+require_once './templates/footer.php';
+
+$sidebar = getSidebar('form-schedule.php');
 
 echo <<< _END
+$header
+
     <div class="main container">
         <section id="main">
             <div id="main-heading">
@@ -76,12 +84,10 @@ echo <<< _END
             // Write the message into that element.
             years.textContent = yearsAgo(est) + ' years ago';
         </script>
+
+        $sidebar
+    </div>
+
+$footer
 _END;
-
-require_once './templates/aside.php';
-printAsides('aside-schedule-form.php');//, 'aside-dummy.php');
-
-echo "\t</div>";
-
-require_once './templates/footer.php';
 ?>

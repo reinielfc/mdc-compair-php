@@ -1,6 +1,5 @@
 <?php
-
-echo <<< _END
+$header = <<< _END
 <!DOCTYPE html>
 <html lang=en>
 <head>
@@ -74,7 +73,6 @@ echo <<< _END
             window.addEventListener('locationchange', setCurrentPageToActive());
             window.addEventListener('hashchange', setCurrentPageToActive, false);
         </script>
-    </nav>\n\n
+    </nav>
 _END;
-
 ?>

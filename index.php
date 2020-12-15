@@ -1,8 +1,16 @@
 <?php
 $title = 'Home';
+define('FILENAME', pathinfo(__FILE__, PATHINFO_FILENAME) . ".php");
+
 require_once './templates/header.php';
+require_once './templates/sidebar.php';
+require_once './templates/footer.php';
+
+$sidebar = getSidebar('form-schedule.php');
 
 echo <<< _END
+$header
+
     <div class="main container">
         <section id="showcase">
             <div class="foreground">
@@ -26,13 +34,10 @@ echo <<< _END
             will notice the difference instantly, a new level of comfort in your life.
             CompAir your air.</p>
         </section>
+
+        $sidebar
+    </div>
+
+$footer
 _END;
-
-require_once './templates/aside.php';
-printAsides('aside-schedule-form.php');
-
-
-echo "\t</div>";
-
-require_once './templates/footer.php';
 ?>

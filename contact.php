@@ -1,11 +1,26 @@
 <?php
 $title = 'Contact';
-$ready = true;
+define('FILENAME', pathinfo(__FILE__, PATHINFO_FILENAME) . ".php");
+
+require_once './templates/header.php';
+require_once './templates/sidebar.php';
+require_once './templates/footer.php';
+
+$sidebar = getSidebar('form-schedule.php'); //, 'contact-table-print.php');//, 'dummy.php');
 $statusMsg = "<span>*</span> Check that all fields with an asterisk are filled correctly.";
 
-if (isset($_POST['submit'])) {
+// form validation and submission
+if (isset($_POST['submit']) && ($_SERVER["REQUEST_METHOD"] == "POST")) {
+    require_once './php/validate.php';
 
-    require_once './php/validate-contact.php';
+    $ready = true
+    && validate('text', $_POST["fname"], true, $fnameErr)
+        && validate('text', $_POST["lname"], true, $lnameErr)
+        && validate('email', $_POST["email"], true, $emailErr)
+        && validate('phone', $_POST["phone"], true, $phoneErr)
+        && validate('text', $_POST["city"], true, $cityErr)
+        && validate('zip', $_POST["zip"], false, $zipErr)
+        && validate('longtext', $_POST["comments"], true, $commentsErr);
 
     if ($ready) {
         require_once './php/DBConnection.php';
@@ -13,15 +28,13 @@ if (isset($_POST['submit'])) {
         $conn->open();
         $conn->insertRecord('contacts', $_POST);
         $conn->close();
-        $statusMsg = "Submitted!";
+        header("Location: submitted-form.php");
     }
 
 }
 
-require_once './templates/header.php';
-
 echo <<< _END
-    <link rel="stylesheet" type="text/css" href="css/main-form.css">
+$header
 
     <div class="main container">
         <section id="main">
@@ -125,12 +138,10 @@ echo <<< _END
                 </table>
             </form>
         </section>
+
+        $sidebar
+    </div>
+
+$footer
 _END;
-
-require_once './templates/aside.php';
-printAsides('aside-schedule-form.php');//, 'aside-dummy.php');//, 'aside-contact-table-print.php');
-
-echo "\t</div>";
-
-require_once './templates/footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-echo "\t\t\t<div class=\"container\">";
+$aside = "\t\t\t<div class=\"filled container\">";
 
 require_once './php/DBConnection.php';
 
@@ -12,7 +12,7 @@ if (isset($_POST['delete']) && isset($_POST['contact_id'])) {
     $contact_id = $conn->real_escape_string($_POST['contact_id']);
     $sql = "DELETE FROM contacts WHERE contact_id='$contact_id'";
     $result = $conn->query($sql);
-    if (!$result) echo "DELETE failed<br><br>";
+    if (!$result) $aside .= "DELETE failed<br><br>";
 }
 
 $sql = "SELECT * FROM $table";
@@ -37,7 +37,7 @@ for ($i = 0; $i < $num_rows; ++$i) {
     $r9  = htmlspecialchars($row[9]);
     $r10 = htmlspecialchars($row[10]);
 
-    echo "\n" . <<<_END
+    $aside .= "\n" . <<<_END
                     <pre style="white-space: pre-wrap">
             Form ID: $r0
          First Name: $r1
@@ -63,5 +63,5 @@ for ($i = 0; $i < $num_rows; ++$i) {
 $conn->close();
 $result->close();
 
-echo "\t\t\t</div>";
+$aside .= "\t\t\t</div>";
 ?>

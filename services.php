@@ -1,8 +1,16 @@
 <?php
 $title = 'Services';
+define('FILENAME', pathinfo(__FILE__, PATHINFO_FILENAME) . ".php");
+
 require_once './templates/header.php';
+require_once './templates/sidebar.php';
+require_once './templates/footer.php';
+
+$sidebar = getSidebar('form-schedule.php', 'ad-24-7-service.php');//, 'dummy.php');
 
 echo <<< _END
+$header
+
     <div class="main container">
         <section id="main">
             <div id="main-heading">
@@ -52,12 +60,8 @@ echo <<< _END
             <button onclick="setProjectType('HVAC Maintenance')">Schedule a Maintenace Check</button>
 
         </section>
-_END;
 
-require_once './templates/aside.php';
-printAsides('aside-schedule-form.php');//, 'aside-dummy.php');
-
-echo <<<_END
+        $sidebar
 
         <script>
             // used for <select> element, selects an <option> by its value
@@ -79,10 +83,9 @@ echo <<<_END
                 select.offsetHeight;
                 select.style.animation = null;
             }
-        </script>\n\n
+        </script>
+    </div>
+
+$footer
 _END;
-
-echo "\t</div>";
-
-require_once './templates/footer.php';
 ?>
