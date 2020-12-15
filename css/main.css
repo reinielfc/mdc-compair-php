@@ -7,6 +7,15 @@
     color: #2be;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -30,7 +39,7 @@ a {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: auto;
     overflow: hidden;
 }
@@ -115,7 +124,7 @@ a {
     transition: all .2s ease-in-out;
 }
 
-#main-header .right h3 {
+#main-header .right p {
     margin: 0;
 }
 
@@ -214,6 +223,10 @@ a {
     background-color: #f60;
 }
 
+#main .container {
+    width: 100%;
+}
+
 #main #available-positions button{
     border: inherit;
     padding: inherit;
@@ -231,9 +244,22 @@ a {
     box-sizing: border-box;
 }
 
-#sidebar .container {
+#sidebar .filled.container {
     background-color: #00112b;
     color: white;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#sidebar .outline.container {
+    border: #00112b solid;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#sidebar .no-outline.container {
     width: auto;
     padding: 10px;
     margin-bottom: 30px;
@@ -254,7 +280,7 @@ a {
     color: #f60;
 }
 
-@media (max-width: 1300px) {
+@media all and (max-width: 1300px) {
 
     #main {
         width: 60%;
@@ -274,14 +300,65 @@ a {
 
 }
 
-@media (max-width: 950px) {
+@media all and (max-width: 900px) {
     #main {
         width: 100%;
         float: none;
     }
 
+    #main .container {
+        overflow: scroll;
+    }
+
     #sidebar {
         width: 100%;
         float: none;
+    }
+
+}
+
+@media all and (max-width: 700px) {
+
+    #main-header {
+        padding-bottom: 3px;
+    }
+
+    #main-header .right {
+        float: left;
+    }
+
+}
+
+@media all and (max-width: 630px) {
+
+    #main-header .left {
+        margin: auto;
+        float: none;
+    }
+
+    #main-header .left h2,
+    #main-header .right {
+        display: none;
+    }
+
+    #main-header .left a {
+        border-right: unset;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar a.hide-mobile {
+        display: none;
+    }
+
+    #navbar {
+        margin: auto;
+    }
+
+}
+
+@media all and (max-width: 450px) {
+    #navbar a {
+        padding: 14px 10px;
     }
 }
