@@ -54,9 +54,10 @@ class DBConnection {
 
                 if ($value == "")
                     $new_data[$name] = "NULL";
-                else if (strtolower($value) == "true" ||
-                         strtolower($value) == "false")
-                    $new_data[$name] = $value;
+                else if (strtolower($value) == "on")
+                    $new_data[$name] = 'true';
+                else if (strtolower($value) == "off")
+                    $new_data[$name] = 'false';
                 else
                     $new_data[$name] = "'".$value."'";
             } else {
