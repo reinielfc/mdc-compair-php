@@ -14,16 +14,11 @@
     <header id="main-header">
         <div class="container">
             <div class="left">
-                <a href="index.html"><img src="img/logo.svg" alt="CompAir"></a>
+                <a href="index.php"><img src="img/logo.svg" alt="CompAir"></a>
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
-                <table style="font-weight: bold;">
-                    <tr>
-                        <td style="text-align: right;">Give us a call:</td>
-                        <td style="text-align: left;"><i>(305) 555-1247</i></td>
-                    </tr>
-                </table>
+                <p>Give us a call: <i>(305) 555-1247</i></p>
             </div>
         </div>
     </header>
@@ -31,34 +26,37 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-				<li><a class="nav-link" href="./index.html">Home</a></li>
-				<li><a class="nav-link" href="./services.html#ac-repair-services">Air Conditioning</a></li>
-				<li><a class="nav-link" href="./services.html#heating-repair">Heating</a></li>
-				<li><a class="nav-link" href="./services.html#hvac-maintenance">Maintenance</a></li>
-				<li><a class="nav-link" href="./services.html">Services</a></li>
-				<li><a class="nav-link" href="./careers.html">Careers</a></li>
-				<li><a class="nav-link" href="./about-us.html">About Us</a></li>
-				<li><a class="nav-link" href="./contact.html">Contact</a></li>
+				<li><a class="nav-link hide-mobile" href="./index.php">Home</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#ac-repair-services">Air Conditioning</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#heating-repair">Heating</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#hvac-maintenance">Maintenance</a></li>
+				<li><a class="nav-link" href="./services.php">Services</a></li>
+				<li><a class="nav-link" href="./careers.php">Careers</a></li>
+				<li><a class="nav-link" href="./about-us.php">About Us</a></li>
+				<li><a class="nav-link" href="./contact.php">Contact</a></li>
             </ul>
         </div>
 
-        <script>
-            function setCurrentPageToActive() {
-                var navLinks = document.getElementsByClassName('nav-link');
-                var curLink = window.location.href;
+    <script>
+        function setCurrentPageToActive() {
+            var navLinks = document.getElementsByClassName('nav-link');
+            var curLink = window.location.href;
 
-                for (let i = 0; i < navLinks.length; i++) {
-                    if (navLinks.item(i).href == curLink) {
-                        navLinks.item(i).setAttribute('class', 'nav-link active');
-                    } else {
-                        navLinks.item(i).setAttribute('class', 'nav-link');
-                    }
+            for (let i = 0; i < navLinks.length; i++) {
+                var element = navLinks.item(i);
+                var elementClass = element.getAttribute('class');
+                if (element.href == curLink) {
+                    element.setAttribute('class', elementClass + " active");
+                } else {
+                    elementClass = elementClass.replace(" active", "");
+                    element.setAttribute('class', elementClass)
                 }
             }
+        }
 
-            window.addEventListener('locationchange', setCurrentPageToActive());
-            window.addEventListener('hashchange', setCurrentPageToActive, false);
-        </script>
+        window.addEventListener('locationchange', setCurrentPageToActive());
+        window.addEventListener('hashchange', setCurrentPageToActive, false);
+    </script>
     </nav>
 
     <div class="main container">
@@ -69,70 +67,73 @@
 
             <div class="image">
                 <img src="./img/hvac-technician.jpg" alt="HVAC Technician.">
-                <!--<a href='https://www.freepik.com/photos/technology'>Technology photo created by master1305 - www.freepik.com</a>-->
+                <a class="attribution" href='https://www.freepik.com/photos/technology'>Technology photo created by master1305 - www.freepik.com</a>
             </div>
 
             <p>To ensure customer satisfaction in our delivery of quality results, we need
             a team of skilled and dedicated professionals. If you are interested in a career
             with CompAir, please review our available positions:</p>
 
-            <table id="available-positions" class="table">
-                <thead>
-                    <tr>
-                        <th>Position*</th>
-                        <th>Type</th>
-                        <th>Address</th>
-                        <th>Post Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <button onclick="setPosition(1, 'Installation Apprentice')">Installation Apprentice</button>
-                        </td>
-                        <td>Part-Time</td>
-                        <td>3162 Ridenour Street, Miami, FL 33176</td>
-                        <td>11/02/20</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button onclick="setPosition(2, 'Maintenance Technician')">Maintenance Technician</button>
-                        </td>
-                        <td>Full-Time</td>
-                        <td>3162 Ridenour Street, Miami, FL 33176</td>
-                        <td>11/21/20</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button onclick="setPosition(4, 'Installation Technician')">Installation Technician</button>
-                        </td>
-                        <td>Full-Time</td>
-                        <td>3162 Ridenour Street, Miami, FL 33176</td>
-                        <td>12/08/20</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>* Click on a position to apply for it.</p>
-		</section>
-
-        <script src="./js/utils.js"></script>
-        <script>
-            function setPosition(positionID, position) {
-                var formPosition = document.getElementById('application-form-position');
-                var formPositionID = document.getElementById('application-form-position-id');
-
-                formPosition.setAttribute('value', position);
-                formPositionID.setAttribute('value', positionID);
-
-                noticeMe(formPosition);
-            }
-        </script>
-
-		<aside id="sidebar">
-            <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
             <div class="container">
-                <form id="application-form" action="application-form.html" method="POST" autocomplete="off">
+                <table id="available-positions" class="table">
+                    <thead>
+                        <tr>
+                            <th>Position*</th>
+                            <th>Type</th>
+                            <th>Address</th>
+                            <th>Post Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button onclick="setPosition(1, 'Installation Apprentice')">Installation Apprentice</button>
+                            </td>
+                            <td>Part-Time</td>
+                            <td>3162 Ridenour Street, Miami, FL 33176</td>
+                            <td>11/02/20</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button onclick="setPosition(2, 'Maintenance Technician')">Maintenance Technician</button>
+                            </td>
+                            <td>Full-Time</td>
+                            <td>3162 Ridenour Street, Miami, FL 33176</td>
+                            <td>11/21/20</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button onclick="setPosition(4, 'Installation Technician')">Installation Technician</button>
+                            </td>
+                            <td>Full-Time</td>
+                            <td>3162 Ridenour Street, Miami, FL 33176</td>
+                            <td>12/08/20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>* Click on a position to apply for it.</p>
+
+            <script src="./js/utils.js"></script>
+            <script>
+                function setPosition(positionID, position) {
+                    var formPosition = document.getElementById('application-form-position');
+                    var formPositionID = document.getElementById('application-form-position-id');
+
+                    formPosition.setAttribute('value', position);
+                    formPositionID.setAttribute('value', positionID);
+
+                    noticeMe(formPosition);
+                }
+            </script>
+        </section>
+
+        <aside id="sidebar">
+            <link rel="stylesheet" type="text/css" href="css/aside-form.css">
+
+            <div class="filled container">
+                <form id="application-form" action="careers.php" method="POST" autocomplete="off">
                     <h3>Application Form</h3>
                     <p>Do you wish to join our team? Please send us your resume and fill out the fields below:</p>
 
@@ -140,13 +141,13 @@
                     <input type="text" name="position" id="application-form-position" placeholder="(Select from the available positions)" required disabled>
 
                     <label for="application-form-fullname">Full Name</label>
-                    <input type="text" name="fullname" id="application-form-fullname" placeholder="John Doe" required>
+                    <input type="text" name="full_name" id="application-form-fullname" placeholder="John Doe" required>
 
                     <label for="application-form-email">Email Address</label>
                     <input type="email" name="email" id="application-form-email" placeholder="email@example.com" required>
 
                     <label for="application-form-phone">Phone Number</label>
-                    <input type="tel" name="phone" id="application-form-phone" placeholder="305-555-7777" required>
+                    <input type="tel" name="phone" id="application-form-phone" placeholder="305-555-7777" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" required>
 
                     <label for="application-form-resume">Upload Resume</label>
                     <input type="file" id="application-form-resume">
@@ -155,19 +156,19 @@
                     <textarea name="cover_letter" id="application-form-cover-letter" cols="30" rows="10" placeholder="Type or paste your cover letter here..." required></textarea>
 
                     <input type="hidden" name="position_id" id="application-form-position-id">
-                    <input type="submit" name="submit" value="SEND APPLICATION">
+                    <input type="submit" name="application_form_submit" value="SEND APPLICATION">
                 </form>
             </div>
 		</aside>
-	</div>
+    </div>
 
     <footer id="main-footer">
         <p>
-            <a href="index.html">Home</a> |
-            <a href="services.html">Services</a> |
-            <a href="careers.html">Careers</a> |
-            <a href="about-us.html">About Us</a> |
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Home</a> |
+            <a href="services.php">Services</a> |
+            <a href="careers.php">Careers</a> |
+            <a href="about-us.php">About Us</a> |
+            <a href="contact.php">Contact</a>
         </p>
         <p>Created By Reiniel Fernandez Cruz</p>
     </footer>

@@ -67,12 +67,37 @@ a {
     padding: 5px;
 }
 
-.image img {
+.image {
+    text-align: left;
     margin: 8px 0px;
+    position: relative;
+}
+
+.image img {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
     object-position: top;
+    display: block;
+}
+
+.image img.fit {
+    object-fit: contain;
+}
+
+.image:hover .attribution {
+    visibility: visible;
+}
+
+.image .attribution {
+    display: block;
+    width: 100%;
+    background-color: rgb(0, 17, 43, 0.7);
+    color: #fff;
+    padding: 2.5px 5px;
+    position: absolute;
+    translate: 0% -100%;
+    visibility: hidden;
 }
 
 #main-header {
@@ -99,7 +124,7 @@ a {
     transition: all .2s ease-in-out;
 }
 
-#main-header .right h3 {
+#main-header .right p {
     margin: 0;
 }
 
@@ -198,6 +223,10 @@ a {
     background-color: #f60;
 }
 
+#main .container {
+    width: 100%;
+}
+
 #main #available-positions button{
     border: inherit;
     padding: inherit;
@@ -215,9 +244,22 @@ a {
     box-sizing: border-box;
 }
 
-#sidebar .container {
+#sidebar .filled.container {
     background-color: #00112b;
     color: white;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#sidebar .outline.container {
+    border: #00112b solid;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#sidebar .no-outline.container {
     width: auto;
     padding: 10px;
     margin-bottom: 30px;
@@ -258,14 +300,65 @@ a {
 
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 900px) {
     #main {
         width: 100%;
         float: none;
     }
 
+    #main .container {
+        overflow: scroll;
+    }
+
     #sidebar {
         width: 100%;
         float: none;
+    }
+
+}
+
+@media all and (max-width: 700px) {
+
+    #main-header {
+        padding-bottom: 3px;
+    }
+
+    #main-header .right {
+        float: left;
+    }
+
+}
+
+@media all and (max-width: 630px) {
+
+    #main-header .left {
+        margin: auto;
+        float: none;
+    }
+
+    #main-header .left h2,
+    #main-header .right {
+        display: none;
+    }
+
+    #main-header .left a {
+        border-right: unset;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar a.hide-mobile {
+        display: none;
+    }
+
+    #navbar {
+        margin: auto;
+    }
+
+}
+
+@media all and (max-width: 450px) {
+    #navbar a {
+        padding: 14px 10px;
     }
 }

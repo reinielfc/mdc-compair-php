@@ -14,16 +14,11 @@
     <header id="main-header">
         <div class="container">
             <div class="left">
-                <a href="index.html"><img src="img/logo.svg" alt="CompAir"></a>
+                <a href="index.php"><img src="img/logo.svg" alt="CompAir"></a>
                 <h2>HVAC Installation<br>Maintenance & Repair</h2>
             </div>
             <div class="right">
-                <table style="font-weight: bold;">
-                    <tr>
-                        <td style="text-align: right;">Give us a call:</td>
-                        <td style="text-align: left;"><i>(305) 555-1247</i></td>
-                    </tr>
-                </table>
+                <p>Give us a call: <i>(305) 555-1247</i></p>
             </div>
         </div>
     </header>
@@ -31,44 +26,44 @@
     <nav id="navbar">
         <div class="container">
             <ul>
-				<li><a class="nav-link" href="./index.html">Home</a></li>
-				<li><a class="nav-link" href="./services.html#ac-repair-services">Air Conditioning</a></li>
-				<li><a class="nav-link" href="./services.html#heating-repair">Heating</a></li>
-				<li><a class="nav-link" href="./services.html#hvac-maintenance">Maintenance</a></li>
-				<li><a class="nav-link" href="./services.html">Services</a></li>
-				<li><a class="nav-link" href="./careers.html">Careers</a></li>
-				<li><a class="nav-link" href="./about-us.html">About Us</a></li>
-				<li><a class="nav-link" href="./contact.html">Contact</a></li>
+				<li><a class="nav-link hide-mobile" href="./index.php">Home</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#ac-repair-services">Air Conditioning</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#heating-repair">Heating</a></li>
+				<li><a class="nav-link hide-mobile" href="./services.php#hvac-maintenance">Maintenance</a></li>
+				<li><a class="nav-link" href="./services.php">Services</a></li>
+				<li><a class="nav-link" href="./careers.php">Careers</a></li>
+				<li><a class="nav-link" href="./about-us.php">About Us</a></li>
+				<li><a class="nav-link" href="./contact.php">Contact</a></li>
             </ul>
         </div>
 
-        <script>
-            function setCurrentPageToActive() {
-                var navLinks = document.getElementsByClassName('nav-link');
-                var curLink = window.location.href;
+    <script>
+        function setCurrentPageToActive() {
+            var navLinks = document.getElementsByClassName('nav-link');
+            var curLink = window.location.href;
 
-                for (let i = 0; i < navLinks.length; i++) {
-                    if (navLinks.item(i).href == curLink) {
-                        navLinks.item(i).setAttribute('class', 'nav-link active');
-                    } else {
-                        navLinks.item(i).setAttribute('class', 'nav-link');
-                    }
+            for (let i = 0; i < navLinks.length; i++) {
+                var element = navLinks.item(i);
+                var elementClass = element.getAttribute('class');
+                if (element.href == curLink) {
+                    element.setAttribute('class', elementClass + " active");
+                } else {
+                    elementClass = elementClass.replace(" active", "");
+                    element.setAttribute('class', elementClass)
                 }
             }
+        }
 
-            window.addEventListener('locationchange', setCurrentPageToActive());
-            window.addEventListener('hashchange', setCurrentPageToActive, false);
-        </script>
+        window.addEventListener('locationchange', setCurrentPageToActive());
+        window.addEventListener('hashchange', setCurrentPageToActive, false);
+    </script>
     </nav>
-
-    <link rel="stylesheet" type="text/css" href="css/main-form.css">
 
     <div class="main container">
         <section id="main">
             <div id="main-heading">
                 <h1>Contact</h1>
             </div>
-
 
             <p>Should you have any questions and/or complaints:</p>
             <ul style="line-height: normal;">
@@ -77,7 +72,9 @@
                 <li>Fill out the following form:</li>
             </ul>
 
-            <form action="contact.html" method="POST" autocomplete="on">
+            <link rel="stylesheet" type="text/css" href="css/main-form.css">
+
+            <form action="contact.php" method="POST" autocomplete="on">
                 <table>
                     <tr>
                         <td>
@@ -166,13 +163,13 @@
             </form>
         </section>
 
-		<aside id="sidebar">
+        <aside id="sidebar">
             <link rel="stylesheet" type="text/css" href="css/aside-form.css">
 
-            <div class="container">
-                <form id="schedule-form" action="schedule-form.html" method="POST" autocomplete="off">
+            <div class="filled container">
+                <form id="schedule-form" action="./contact.php" method="POST" autocomplete="off">
                     <p>Get Started Now</p>
-                    <input type="text" name="fullname" id="schedule-form-fullname" placeholder="Full Name" required>
+                    <input type="text" name="full_name" id="schedule-form-fullname" placeholder="Full Name" required>
                     <input type="email" name="email" id="schedule-form-email" placeholder="Email" required>
                     <input type="tel" name="phone" id="schedule-form-phone" placeholder="Phone Number" required>
                     <input type="text" name="address" id="schedule-form-address" placeholder="Full Address" required>
@@ -186,19 +183,19 @@
                         <option>HVAC Maintenance</option>
                     </select>
                     <textarea name="project_desc" id="schedule-form-project-desc" cols="30" rows="10" placeholder="Project Description" required></textarea>
-                    <input type="submit" name="submit" value="SCHEDULE NOW!">
+                    <input type="submit" name="schedule_form_submit" value="SCHEDULE NOW!">
                 </form>
             </div>
 		</aside>
-	</div>
+    </div>
 
     <footer id="main-footer">
         <p>
-            <a href="index.html">Home</a> |
-            <a href="services.html">Services</a> |
-            <a href="careers.html">Careers</a> |
-            <a href="about-us.html">About Us</a> |
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Home</a> |
+            <a href="services.php">Services</a> |
+            <a href="careers.php">Careers</a> |
+            <a href="about-us.php">About Us</a> |
+            <a href="contact.php">Contact</a>
         </p>
         <p>Created By Reiniel Fernandez Cruz</p>
     </footer>

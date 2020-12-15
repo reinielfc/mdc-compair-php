@@ -60,53 +60,26 @@
     </nav>
 
     <div class="main container">
-        <section id="showcase">
-            <div class="foreground">
-                <h1>Give your home a boost in comfort.</h1>
-            </div>
-        </section>
-
         <section id="main">
-            <h1>Welcome</h1>
-            <p>Started in 2012, by a father and his son, CompAir was founded with one mission
-            in mind; to provide a better service, at a lower price. Towards that goal we are
-            committed 100%, we believe that customer comfort and satisfaction should always
-            come first. We pride ourselves with providing an individualized service for each
-            and every customer, whether residential or commercial, we believe that their
-            uniqueness should grant them special attention.</p>
-
-            <p>If you are in need of quality heating, ventilation, or air conditioning in the
-            areas of Kendall, Coral Gables, Doral, Palmetto Bay, or other surrounding areas
-            don't hesitate to give us a call. CompAir will take care of all your HVAC
-            installation, maintenance, replacement, and repair needs. After we are done, you
-            will notice the difference instantly, a new level of comfort in your life.
-            CompAir your air.</p>
+            <h1>Your form has been submitted successfully!</h1>
+            <p>Redirecting Home in ... <span id="countdown">6</span> seconds</p>
         </section>
 
-        <aside id="sidebar">
-            <link rel="stylesheet" type="text/css" href="css/aside-form.css">
+        <script>
+            var seconds = 5;
 
-            <div class="filled container">
-                <form id="schedule-form" action="./index.php" method="POST" autocomplete="off">
-                    <p>Get Started Now</p>
-                    <input type="text" name="full_name" id="schedule-form-fullname" placeholder="Full Name" required>
-                    <input type="email" name="email" id="schedule-form-email" placeholder="Email" required>
-                    <input type="tel" name="phone" id="schedule-form-phone" placeholder="Phone Number" required>
-                    <input type="text" name="address" id="schedule-form-address" placeholder="Full Address" required>
-                    <select name="project_type" id="schedule-form-project-type" required>
-                        <option value="">Project Type</option>
-                        <option>AC Repair</option>
-                        <option>AC Installation</option>
-                        <option>Heating Unit Repair</option>
-                        <option>Heating Unit Installation</option>
-                        <option>Refrigeration Unit Repair</option>
-                        <option>HVAC Maintenance</option>
-                    </select>
-                    <textarea name="project_desc" id="schedule-form-project-desc" cols="30" rows="10" placeholder="Project Description" required></textarea>
-                    <input type="submit" name="schedule_form_submit" value="SCHEDULE NOW!">
-                </form>
-            </div>
-		</aside>
+            function countdown() {
+                seconds = seconds - 1;
+                if (seconds <= 0) {
+                    window.location = "./index.php";
+                } else {
+                    document.getElementById("countdown").innerHTML = seconds;
+                    window.setTimeout("countdown()", 1000);
+                }
+            }
+
+            countdown();
+        </script>
     </div>
 
     <footer id="main-footer">
