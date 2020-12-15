@@ -42,13 +42,14 @@ $header
                 <h1>Contact</h1>
             </div>
 
-
             <p>Should you have any questions and/or complaints:</p>
             <ul style="line-height: normal;">
                 <li>Call us at <b>305-555-1247</b>, or</li>
                 <li>Email us at <a href="mailto:contact@compair.com">contact@compair.com</a>, or</li>
                 <li>Fill out the following form:</li>
             </ul>
+
+            <link rel="stylesheet" type="text/css" href="css/main-form.css">
 
             <form action="contact.php" method="POST" autocomplete="on">
                 <table>
