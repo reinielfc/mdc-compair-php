@@ -2,9 +2,10 @@
 $header = <<< _END
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
     <title>$title | CompAir</title>
-    <link rel="icon" href="img/favicon.svg">
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
