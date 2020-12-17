@@ -12,8 +12,8 @@ html {
 }
 
 @viewport {
-  width: device-width ;
-  zoom: 1.0 ;
+  width: device-width;
+  zoom: 1.0;
 }
 
 * {
@@ -96,7 +96,7 @@ a {
     color: #fff;
     padding: 2.5px 5px;
     position: absolute;
-    translate: 0% -100%;
+    transform: translateY(-100%);
     visibility: hidden;
 }
 
