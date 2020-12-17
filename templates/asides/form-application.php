@@ -8,14 +8,18 @@ else
 
 if (isset($_POST['application_form_submit']) && ($_SERVER["REQUEST_METHOD"] == "POST")) {
     require_once './php/validate.php';
+    require_once './php/upload-file.php';
+
+    $uploadFile = 'resume';
+    $destination = 'uploads/';
 
     $ready = true
         && validate('text', $_POST["full_name"], true, $fnameErr)
         && validate('email', $_POST["email"], true, $emailErr)
         && validate('phone', $_POST["phone"], true, $phoneErr)
-        && validate('longtext', $_POST["cover_letter"], true, $commentsErr);
-        //TODO: File Submission
+        && uploadFile($uploadFile, $destination, $resumeErr, 'doc', 'docx', 'pdf');
 
+        $_POST['resume'] = $destination;
     if ($ready) {
         require_once './php/DBConnection.php';
         $conn = new DBConnection();
@@ -46,8 +50,7 @@ $aside = <<< _END
                     <label for="application-form-phone">Phone Number</label>
                     <input type="tel" name="phone" id="application-form-phone" placeholder="305-555-7777" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" required>
 
-                    <label for="application-form-resume">Upload Resume</label>
-                    <input type="file" id="application-form-resume">
+                    <input type="file" name="resume" id="application-form-resume" accept=".doc, .docx, .pdf" required>
 
                     <label for="application-form-cover-letter">Cover Letter</label>
                     <textarea name="cover_letter" id="application-form-cover-letter" cols="30" rows="10" placeholder="Type or paste your cover letter here..." required></textarea>
