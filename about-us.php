@@ -32,7 +32,7 @@ $header
             level of comfort in no time.</p>
 
             <div class="image">
-                <img class="fit" src="./img/delivery-van.png" alt="">
+                <img class="fit" src="./img/delivery-van.png" alt="CompAir Van">
             </div>
 
             <h2>Facts About Us</h2>
