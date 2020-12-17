@@ -9,6 +9,9 @@ function validate($fieldType, &$field, $required, &$error="") {
     $sanitizedField = sanitize($field);
 
     switch ($fieldType) {
+        case 'any';
+            return true;
+            break;
         case 'longtext':
             $pattern = "/(.*?)/";
             break;
